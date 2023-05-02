@@ -197,18 +197,18 @@ class _RegisterPageState extends State<RegisterPage> {
                 const SizedBox(height: 25),
 
                 // google + apple sign in buttons
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    // google button
-                    SquareTile(imagePath: 'assets/images/google.png'),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.center,
+                //   children: const [
+                //     // google button
+                //     SquareTile(imagePath: 'assets/images/google.png'),
 
-                    SizedBox(width: 25),
+                //     SizedBox(width: 25),
 
-                    // apple button
-                    SquareTile(imagePath: 'assets/images/apple.png')
-                  ],
-                ),
+                //     // apple button
+                //     SquareTile(imagePath: 'assets/images/apple.png')
+                //   ],
+                // ),
 
                 const SizedBox(height: 50),
 
