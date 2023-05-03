@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learning_app/constants/colors.dart';
 import 'package:learning_app/widgets/list_vew_cards.dart';
+import 'package:learning_app/widgets/explore_course/tag_category.dart';
 
 class ExploreCourse extends StatefulWidget {
   const ExploreCourse({Key? key}) : super(key: key);
@@ -11,27 +12,6 @@ class ExploreCourse extends StatefulWidget {
 
 class _ExploreCourseState extends State<ExploreCourse> {
   // add list tags that inline in Information Technology maximum 10
-  List<String> tags = [
-    'All',
-    'Information Technology',
-    'Business',
-    'Design',
-    'Photography',
-    'Music',
-    'Marketing',
-    'Development',
-    'Personal Development',
-    'Health & Fitness',
-    'Office Productivity',
-    'Language',
-    'Lifestyle',
-    'Math & Science',
-    'Teaching & Academics',
-    'Social Science',
-    'Engineering',
-    'Humanities',
-    'Test Prep',
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -96,50 +76,7 @@ class _ExploreCourseState extends State<ExploreCourse> {
                 ),
               ),
               // Browse by category
-              Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Browser Category',
-                        style: TextStyle(
-                          color: light_100,
-                          fontFamily: 'DMSans',
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      // tags
-                      // 1st row
-                      Wrap(
-                        spacing: 10,
-                        children: tags
-                            .sublist(0, 5)
-                            .map((e) => Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 15, vertical: 10),
-                                  margin: const EdgeInsets.only(bottom: 10),
-                                  decoration: BoxDecoration(
-                                    color: primary,
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  child: Text(
-                                    e,
-                                    style: const TextStyle(
-                                      color: light_100,
-                                      fontFamily: 'DMSans',
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.normal,
-                                    ),
-                                  ),
-                                ))
-                            .toList(),
-                      ),
-                    ],
-                  )),
+              const TagCategory(),
               // Recommended Course
               Expanded(
                 child:Column(
@@ -157,7 +94,7 @@ class _ExploreCourseState extends State<ExploreCourse> {
                           fontWeight: FontWeight.bold,
                         ),
                       )),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 10),
                   const Expanded(
                     child: ListViewCards(),
                   ),
