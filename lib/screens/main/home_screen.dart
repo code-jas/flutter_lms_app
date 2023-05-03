@@ -23,7 +23,6 @@ class HomeScreen extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       child: Stack(
         // add background color
-
         children: [
         
           Positioned(

@@ -14,7 +14,7 @@ class _CourseCardState extends State<CourseCard> {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(20),
-      margin: const EdgeInsets.all(20),
+      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       decoration: BoxDecoration(
         color: dark_200,
         borderRadius: BorderRadius.circular(20),
