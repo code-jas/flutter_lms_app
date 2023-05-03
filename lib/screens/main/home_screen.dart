@@ -1,8 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:learning_app/constants/colors.dart';
 
-class HomePage extends StatelessWidget {
-  HomePage({super.key});
+class HomeScreen extends StatelessWidget {
+  HomeScreen({super.key});
 
   final user = FirebaseAuth.instance.currentUser!;
 
@@ -14,7 +15,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: dark_100,
       appBar: AppBar(
         backgroundColor: Colors.grey[900],
         actions: [
@@ -25,10 +26,11 @@ class HomePage extends StatelessWidget {
         ],
       ),
       body: Center(
-          child: Text(
-        "LOGGED IN AS: ${user.email!}",
-        style: const TextStyle(fontSize: 20),
-      )),
+        child: Text(
+          "LOGGED IN AS: ${user.email!}",
+          style: const TextStyle(fontSize: 20, color: light_100),
+        ),
+      ),
     );
   }
 }

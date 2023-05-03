@@ -81,12 +81,12 @@ flutter:
   fonts:
     - family: DMSans
       fonts:
-        - asset: fonts/DMSans-Regular.ttf
-        - asset: fonts/DMSans-Bold.ttf
-        - asset: fonts/DMSans-BoldItalic.ttf
-        - asset: fonts/DMSans-Medium.ttf
-        - asset: fonts/DMSans-MediumItalic.ttf
-        - asset: fonts/DMSans-Italic.ttf
+        - asset: assets/fonts/DMSans-Regular.ttf
+        - asset: assets/fonts/DMSans-Bold.ttf
+        - asset: assets/fonts/DMSans-BoldItalic.ttf
+        - asset: assets/fonts/DMSans-Medium.ttf
+        - asset: assets/fonts/DMSans-MediumItalic.ttf
+        - asset: assets/fonts/DMSans-Italic.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
