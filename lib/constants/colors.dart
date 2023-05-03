@@ -10,6 +10,7 @@ const Color default_ = Color(0xFF292B2D);
 const Color light_100 = Color(0xFFFFFFFF);
 const Color light_200 = Color(0xFFF1F1FA);
 const Color light_300 = Color(0xFF91919F);
+const Color light_400 = Color(0xFF58595C);
 
 const Color dark_100 = Color(0xFF161719);
 const Color dark_200 = Color(0xFF212325);

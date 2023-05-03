@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:learning_app/constants/colors.dart';
 import 'package:learning_app/widgets/home_screen/header_bar.dart';
-import 'package:learning_app/widgets/course_status_card.dart';
+import 'package:learning_app/widgets/home_screen/course_status_card.dart';
 import 'package:learning_app/widgets/list_vew_cards.dart';
 
 class HomeScreen extends StatelessWidget {

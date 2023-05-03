@@ -38,7 +38,7 @@ class _AppBarWState extends State<AppBarWidget> {
           left: 25.0,
         ),
         onPressed: () {
-          // Add your back button logic here
+          Navigator.pop(context);
         },
       ),
       backgroundColor: default_,
