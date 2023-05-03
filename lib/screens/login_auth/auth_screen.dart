@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:learning_app/screens/main/dashboard.dart';
 import 'package:learning_app/screens/login_auth/signin_or_signup.dart';
 
+import 'package:learning_app/widgets/course_card.dart';
+
 class AuthPage extends StatelessWidget {
   const AuthPage({super.key});
 
