@@ -47,7 +47,6 @@ class _DashboardState extends State<Dashboard> {
           height: 70,
           child: BottomNavigationBar(
             // add padding to the navigation bar items
-
             items: <BottomNavigationBarItem>[
               BottomNavigationBarItem(
                 icon: Column(
