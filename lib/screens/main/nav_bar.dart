@@ -52,7 +52,7 @@ class _DashboardState extends State<Dashboard> {
                   children: const [
                     SizedBox(height: 5),
                     Icon(FeatherIcons.home),
-                    SizedBox(height: 5),
+                    SizedBox(height: 3),
                   ],
                 ),
                 label: 'Home',
@@ -62,7 +62,7 @@ class _DashboardState extends State<Dashboard> {
                   children: const [
                     SizedBox(height: 5),
                     Icon(FeatherIcons.search),
-                    SizedBox(height: 5),
+                    SizedBox(height: 3),
                   ],
                 ),
                 label: 'Explore',
@@ -72,17 +72,18 @@ class _DashboardState extends State<Dashboard> {
                   children: const [
                     SizedBox(height: 5),
                     Icon(FeatherIcons.playCircle),
-                    SizedBox(height: 5),
+                    SizedBox(height: 3),
                   ],
                 ),
                 label: 'Course',
               ),
               BottomNavigationBarItem(
                 icon: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: const [
                     SizedBox(height: 5),
                     Icon(FeatherIcons.user),
-                    SizedBox(height: 5),
+                    SizedBox(height: 3),
                   ],
                 ),
                 label: 'Account',
@@ -96,6 +97,7 @@ class _DashboardState extends State<Dashboard> {
             unselectedItemColor: light_100,
             selectedFontSize: 10,
             unselectedFontSize: 0,
+            elevation: 0,
             selectedItemColor: secondary,
             onTap: (int index) {
               switch (index) {

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:learning_app/constants/colors.dart';
 import 'package:learning_app/services/auth_service.dart';
 import 'package:learning_app/widgets/login/button.dart';
-import 'package:learning_app/widgets/login/square_tile.dart';
 import 'package:learning_app/widgets/login/text_field.dart';
 
 class LoginPage extends StatefulWidget {
