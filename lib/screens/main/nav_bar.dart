@@ -46,12 +46,16 @@ class _DashboardState extends State<Dashboard> {
         child: SizedBox(
           height: 70,
           child: BottomNavigationBar(
+            // add padding to the navigation bar items
+            
             items: <BottomNavigationBarItem>[
               BottomNavigationBarItem(
                 icon: Column(
                   children: const [
                     SizedBox(height: 5),
-                    Icon(FeatherIcons.home),
+                    Icon(FeatherIcons.home,
+                      size: 22,
+                    ),
                     SizedBox(height: 5),
                   ],
                 ),
@@ -61,7 +65,8 @@ class _DashboardState extends State<Dashboard> {
                 icon: Column(
                   children: const [
                     SizedBox(height: 5),
-                    Icon(FeatherIcons.search),
+                    Icon(FeatherIcons.search,
+                           size: 22,),
                     SizedBox(height: 5),
                   ],
                 ),
@@ -71,7 +76,8 @@ class _DashboardState extends State<Dashboard> {
                 icon: Column(
                   children: const [
                     SizedBox(height: 5),
-                    Icon(FeatherIcons.playCircle),
+                    Icon(FeatherIcons.playCircle,
+                           size: 22,),
                     SizedBox(height: 5),
                   ],
                 ),
@@ -81,7 +87,8 @@ class _DashboardState extends State<Dashboard> {
                 icon: Column(
                   children: const [
                     SizedBox(height: 5),
-                    Icon(FeatherIcons.user),
+                    Icon(FeatherIcons.user,
+                    ),
                     SizedBox(height: 5),
                   ],
                 ),
