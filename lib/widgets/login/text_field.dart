@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_app/constants/colors.dart';
 
 class LoginTextField extends StatelessWidget {
   final controller;
@@ -16,20 +17,40 @@ class LoginTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25.0),
-      child: TextField(
-        controller: controller,
-        obscureText: obscureText,
-        decoration: InputDecoration(
+      child: SizedBox(
+        height: 50,
+        child: TextField(
+          controller: controller,
+          obscureText: obscureText,
+          style: const TextStyle(
+            color: light_100,
+            fontSize: 14,
+          ),
+          decoration: InputDecoration(
+            contentPadding: const EdgeInsets.only(
+              top: 5,
+              bottom: 5,
+              right: 20,
+              left: 20,
+            ),
             enabledBorder: const OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.white),
+              borderSide: BorderSide(color: light_300),
+              borderRadius: BorderRadius.all(
+                Radius.circular(12.0),
+              ),
             ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.grey.shade400),
+            focusedBorder: const OutlineInputBorder(
+              borderSide: BorderSide(color: light_100),
+              borderRadius: BorderRadius.all(
+                Radius.circular(12.0),
+              ),
             ),
-            fillColor: Colors.grey.shade200,
+            fillColor: Colors.transparent,
             filled: true,
             hintText: hintText,
-            hintStyle: TextStyle(color: Colors.grey[500])),
+            hintStyle: const TextStyle(color: light_100),
+          ),
+        ),
       ),
     );
   }
