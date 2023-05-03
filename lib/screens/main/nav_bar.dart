@@ -43,34 +43,58 @@ class _DashboardState extends State<Dashboard> {
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
         ),
-        child: Container(
-          color: dark_200,
+        child: SizedBox(
           height: 70,
           child: BottomNavigationBar(
-            backgroundColor: dark_200,
-            items: const <BottomNavigationBarItem>[
+            items: <BottomNavigationBarItem>[
               BottomNavigationBarItem(
-                icon: Icon(FeatherIcons.home),
+                icon: Column(
+                  children: const [
+                    SizedBox(height: 5),
+                    Icon(FeatherIcons.home),
+                    SizedBox(height: 5),
+                  ],
+                ),
                 label: 'Home',
               ),
               BottomNavigationBarItem(
-                icon: Icon(FeatherIcons.search),
+                icon: Column(
+                  children: const [
+                    SizedBox(height: 5),
+                    Icon(FeatherIcons.search),
+                    SizedBox(height: 5),
+                  ],
+                ),
                 label: 'Explore',
               ),
               BottomNavigationBarItem(
-                icon: Icon(FeatherIcons.playCircle),
+                icon: Column(
+                  children: const [
+                    SizedBox(height: 5),
+                    Icon(FeatherIcons.playCircle),
+                    SizedBox(height: 5),
+                  ],
+                ),
                 label: 'Course',
               ),
               BottomNavigationBarItem(
-                icon: Icon(FeatherIcons.user),
+                icon: Column(
+                  children: const [
+                    SizedBox(height: 5),
+                    Icon(FeatherIcons.user),
+                    SizedBox(height: 5),
+                  ],
+                ),
                 label: 'Account',
               ),
             ],
+            backgroundColor: dark_200,
+            type: BottomNavigationBarType.fixed,
             currentIndex: _selectedIndex,
-            selectedIconTheme: const IconThemeData(size: 30),
-            unselectedItemColor: dark_200,
-            selectedFontSize: 0,
-            elevation: 0,
+            selectedIconTheme: const IconThemeData(size: 25),
+            unselectedIconTheme: const IconThemeData(size: 20),
+            unselectedItemColor: light_100,
+            selectedFontSize: 10,
             unselectedFontSize: 0,
             selectedItemColor: secondary,
             onTap: (int index) {

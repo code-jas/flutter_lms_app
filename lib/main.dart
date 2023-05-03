@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
       title: 'Learning App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: 'DMSans',
       ),
       home: const AuthPage(),
     );
