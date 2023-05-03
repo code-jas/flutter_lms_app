@@ -47,7 +47,9 @@ class _AppBarWState extends State<AppBarWidget> {
       title: Padding(
         padding: EdgeInsets.only(top: widget.paddingController.toDouble()),
         child: Text(
-          widget.title,
+          widget.title.length > 30
+              ? '${widget.title.substring(0, 30)}...'
+              : widget.title,
           style: const TextStyle(
             color: light_100,
             fontSize: 16,

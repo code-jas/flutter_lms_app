@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learning_app/constants/colors.dart';
 import 'package:feather_icons/feather_icons.dart';
+import 'package:learning_app/screens/main/course_content_list.dart';
 import 'package:learning_app/widgets/app_bar.dart';
 import 'package:learning_app/widgets/courses/tag_detail.dart';
 
@@ -158,7 +159,7 @@ class _CourseDetailState extends State<CourseDetail> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const CourseDetail(),
+                              builder: (context) => const CourseContentList(),
                             ),
                           );
                         },
