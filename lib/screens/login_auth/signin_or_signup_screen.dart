@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:learning_app/screens/login_auth/login_page.dart';
-import 'package:learning_app/screens/login_auth/register_page.dart';
+import 'package:learning_app/screens/login_auth/sign_in.dart';
+import 'package:learning_app/screens/login_auth/sign_up_screen.dart';
 
 class RegisterLoginPage extends StatefulWidget {
   const RegisterLoginPage({super.key});
