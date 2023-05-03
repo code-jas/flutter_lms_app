@@ -21,8 +21,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false, // remove debug banner
       title: 'Learning App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
         fontFamily: 'DMSans',
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
+            .copyWith(background: const Color(0xFF292B2D)),
       ),
       home: const AuthPage(),
     );

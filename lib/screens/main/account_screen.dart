@@ -2,6 +2,7 @@ import 'package:feather_icons/feather_icons.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:learning_app/constants/colors.dart';
+import 'package:learning_app/widgets/app_bar.dart';
 import 'package:learning_app/widgets/login/button_signout.dart';
 
 class Account extends StatefulWidget {
@@ -23,49 +24,17 @@ class _AccountState extends State<Account> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: default_,
-      appBar: _accountAppBar(),
+      appBar: const AppBarWidget(
+        title: "Account",
+        paddingController: 0,
+        actions: [],
+      ),
       body: SafeArea(
         child: Stack(
           children: [
             _accountHeader(),
             _actionContainers(),
           ],
-        ),
-      ),
-    );
-  }
-
-  _accountAppBar() {
-    return PreferredSize(
-      preferredSize: const Size.fromHeight(53),
-      child: Container(
-        child: AppBar(
-          leading: IconButton(
-            icon: const Icon(FeatherIcons.chevronLeft),
-            onPressed: () {
-              // Add your back button logic here
-            },
-          ),
-          backgroundColor: default_,
-          elevation: 0,
-          title: const Text(
-            "Account",
-            style: TextStyle(
-              color: light_100,
-              fontSize: 16,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-          centerTitle: true,
-          // actions: [
-          //   IconButton(
-          //     icon: const Icon(
-          //       Icons.add_box_outlined,
-          //       color: light_100,
-          //     ),
-          //     onPressed: () => print("Add"),
-          //   ),
-          // ],
         ),
       ),
     );

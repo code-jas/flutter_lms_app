@@ -24,7 +24,6 @@ class HomeScreen extends StatelessWidget {
       child: Stack(
         // add background color
         children: [
-        
           Positioned(
               // add card with no content just card with background add border radius
               bottom: 0,
@@ -39,32 +38,27 @@ class HomeScreen extends StatelessWidget {
                     topRight: Radius.circular(30),
                   ),
                 ),
-              )
-            ),
-          
+              )),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children:  [
+            children: [
               const HeaderBar(),
               const CourseStatusCard(),
               Container(
-                padding: const EdgeInsets.only(left: 20, top: 20),
-                child:  const Text(
-                  'Recommendation',
-                  style: TextStyle(
-                    color: light_200,
-                    fontFamily: 'DMSans',
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                  ),
-                )
-              ),
+                  padding: const EdgeInsets.only(left: 20, top: 20),
+                  child: const Text(
+                    'Recommendation',
+                    style: TextStyle(
+                      color: light_200,
+                      fontFamily: 'DMSans',
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )),
               const SizedBox(height: 20),
               // add SingleChildScrollView
               Expanded(
-                
-                child: SingleChildScrollView(
-                
+                  child: SingleChildScrollView(
                 scrollDirection: Axis.vertical,
                 child: Column(
                   children: const [
@@ -76,13 +70,9 @@ class HomeScreen extends StatelessWidget {
                     CourseCard()
                   ],
                 ),
-              )
-              ),
-              
+              )),
             ],
           )
- 
-
         ],
       ),
     );
