@@ -1,10 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:learning_app/constants/colors.dart';
-import 'package:learning_app/widgets/header_bar.dart';
+import 'package:learning_app/widgets/home_screen/header_bar.dart';
 import 'package:learning_app/widgets/course_status_card.dart';
-import 'package:learning_app/widgets/course_card.dart';
-import 'package:learning_app/widgets/my_course_card.dart';
+import 'package:learning_app/widgets/list_vew_cards.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -25,7 +24,6 @@ class HomeScreen extends StatelessWidget {
       child: Stack(
         // add background color
         children: [
-        
           Positioned(
               // add card with no content just card with background add border radius
               bottom: 0,
@@ -45,6 +43,7 @@ class HomeScreen extends StatelessWidget {
           
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children:  [
               const HeaderBar(),
               const CourseStatusCard(),
@@ -60,28 +59,14 @@ class HomeScreen extends StatelessWidget {
                   ),
                 )
               ),
-              const SizedBox(height: 20),
-              // add SingleChildScrollView
-              Expanded(
-                
-                child: SingleChildScrollView(
-                
-                scrollDirection: Axis.vertical,
-                child: Column(
-                  children: const [
-                    CourseCard(),
-                    CourseCard(),
-                    CourseCard(),
-                    CourseCard(),
-                    CourseCard(),
-                    CourseCard()
-                  ],
-                ),
-              )
+              // add SingleChildScrollVi
+
+              const Expanded(
+                child: ListViewCards(),
               ),
-              
             ],
-          )
+          ),
+
  
 
         ],
