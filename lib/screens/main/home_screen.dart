@@ -4,6 +4,7 @@ import 'package:learning_app/constants/colors.dart';
 import 'package:learning_app/widgets/header_bar.dart';
 import 'package:learning_app/widgets/course_status_card.dart';
 import 'package:learning_app/widgets/course_card.dart';
+import 'package:learning_app/widgets/my_course_card.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
