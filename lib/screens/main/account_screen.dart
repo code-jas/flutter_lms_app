@@ -16,8 +16,11 @@ class _AccountState extends State<Account> {
       body: SizedBox(
         child: Center(
           child: Text(
-            "Explore",
-            style: const TextStyle(fontSize: 20),
+            "Coming Soon",
+            style: TextStyle(
+              fontSize: 20,
+              color: light_100,
+            ),
           ),
         ),
       ),

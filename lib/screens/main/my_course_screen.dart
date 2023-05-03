@@ -16,8 +16,11 @@ class _MyCourseState extends State<MyCourse> {
       body: SizedBox(
         child: Center(
           child: Text(
-            "Explore",
-            style: const TextStyle(fontSize: 20),
+            "Coming Soon",
+            style: TextStyle(
+              color: light_100,
+              fontSize: 20,
+            ),
           ),
         ),
       ),
