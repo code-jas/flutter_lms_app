@@ -117,9 +117,9 @@ class _AccountState extends State<Account> {
             topRight: Radius.circular(30),
           ),
         ),
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 25),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 25),
+          child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

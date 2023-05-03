@@ -46,13 +46,18 @@ class _DashboardState extends State<Dashboard> {
         child: SizedBox(
           height: 70,
           child: BottomNavigationBar(
+            // add padding to the navigation bar items
+
             items: <BottomNavigationBarItem>[
               BottomNavigationBarItem(
                 icon: Column(
                   children: const [
                     SizedBox(height: 5),
-                    Icon(FeatherIcons.home),
-                    SizedBox(height: 3),
+                    Icon(
+                      FeatherIcons.home,
+                      size: 22,
+                    ),
+                    SizedBox(height: 5),
                   ],
                 ),
                 label: 'Home',
@@ -61,8 +66,11 @@ class _DashboardState extends State<Dashboard> {
                 icon: Column(
                   children: const [
                     SizedBox(height: 5),
-                    Icon(FeatherIcons.search),
-                    SizedBox(height: 3),
+                    Icon(
+                      FeatherIcons.search,
+                      size: 22,
+                    ),
+                    SizedBox(height: 5),
                   ],
                 ),
                 label: 'Explore',
@@ -71,8 +79,11 @@ class _DashboardState extends State<Dashboard> {
                 icon: Column(
                   children: const [
                     SizedBox(height: 5),
-                    Icon(FeatherIcons.playCircle),
-                    SizedBox(height: 3),
+                    Icon(
+                      FeatherIcons.playCircle,
+                      size: 22,
+                    ),
+                    SizedBox(height: 5),
                   ],
                 ),
                 label: 'Course',
@@ -82,8 +93,11 @@ class _DashboardState extends State<Dashboard> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: const [
                     SizedBox(height: 5),
-                    Icon(FeatherIcons.user),
-                    SizedBox(height: 3),
+                    Icon(
+                      FeatherIcons.user,
+                      size: 22,
+                    ),
+                    SizedBox(height: 5),
                   ],
                 ),
                 label: 'Account',
