@@ -118,11 +118,11 @@ class _CourseCardState extends State<CourseCard> {
                               ),
                               const SizedBox(width: 5),
                               Text(
-                                'By $widget.author',
+                                'By ${widget.author}',
                                 style: const TextStyle(
                                   color: dark_300,
                                   fontFamily: 'DMSans',
-                                  fontSize: 14,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.bold,
                                 ),
                               )

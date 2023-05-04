@@ -1,7 +1,369 @@
 [
    {
       "id": 1,
-      "title": "Data Mining",
+      "title": "Introduction to Cloud Computing",
+      "category": [
+         "cloud",
+         "client",
+         "azure",
+         "python",
+         "aws",
+         "infrastructure",
+         "iaas",
+         "paas",
+         "server"
+      ],
+      "ratings": "4.5",
+      "author": "River D. Maya",
+      "authorImage": "assets/images/angelo.jpg",
+      "courseImage": "assets/images/course1.png",
+      "shortDescription": "Cloud Computing",
+      "description": [
+         "Cloud Computing tutorial provides basic and advanced concepts of Cloud Computing. Our Cloud Computing tutorial is designed for beginners and professionals.",
+         "Cloud computing is a virtualization-based technology that allows us to create, configure, and customize applications via an internet connection. The cloud technology includes a development platform, hard disk, software application, and database."
+      ],
+      "contents": [
+         {
+            "title": "Introduction",
+            "subTopicList": [
+               {
+                  "subTopic": "What is Cloud Computing?",
+                  "subTopicContent": [
+                     "The term cloud refers to a network or the internet. It is a technology that uses remote servers on the internet to store, manage, and access data online rather than local drives. The data can be anything such as files, images, documents, audio, video, and more.",
+                     "There are the following operations that we can do using cloud computing:",
+                     "- Developing new applications and services",
+                     "- Storage, back up, and recovery of data",
+                     "- Hosting blogs and websites",
+                     "- Delivery of software on demand",
+                     "- Analysis of data",
+                     "- Streaming videos and audios"
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "8:00",
+            "isDone": true
+         },
+         {
+            "title": "Why Cloud Computing?",
+            "subTopicList": [
+               {
+                  "subTopic": "Why Cloud Computing?",
+                  "subTopicContent": [
+                     "Small as well as large IT companies, follow the traditional methods to provide the IT infrastructure. That means for any IT company, we need a Server Room that is the basic need of IT companies.",
+                     "In that server room, there should be a database server, mail server, networking, firewalls, routers, modem, switches, QPS (Query Per Second means how much queries or load will be handled by the server), configurable system, high net speed, and the maintenance engineers.",
+                     "To establish such IT infrastructure, we need to spend lots of money. To overcome all these problems and to reduce the IT infrastructure cost, Cloud Computing comes into existence."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:00",
+            "isDone": true
+         },
+         {
+            "title": "Characteristics of Cloud Computing",
+            "subTopicList": [
+               {
+                  "subTopic": "What are the characteristics of Cloud Computing?",
+                  "subTopicContent": [
+                     "Agility - The cloud works in a distributed computing environment. It shares resources among users and works very fast.",
+                     "High availability and reliability - The availability of servers is high and more reliable because the chances of infrastructure failure are minimum.",
+                     "High Scalability - Cloud offers 'on-demand' provisioning of resources on a large scale, without having engineers for peak loads.",
+                     "Multi-Sharing - With the help of cloud computing, multiple users and applications can work more efficiently with cost reductions by sharing common infrastructure.",
+                     "Device and Location Independence: Cloud computing enables the users to access systems using a web browser regardless of their location or what device they use e.g., PC, mobile phone, etc. As infrastructure is off-site (typically provided by a third-party) and accessed via the Internet, users can connect from anywhere.",
+                     "Maintenance - Maintenance of cloud computing applications is easier, since they do not need to be installed on each user's computer and can be accessed from different places. So, it reduces the cost also.",
+                     "Low Cost - By using cloud computing, the cost will be reduced because to take the services of cloud computing, IT company need not to set its own infrastructure and pay-as-per usage of resources.",
+                     "Services in the pay-per-use mode - Application Programming Interfaces (APIs) are provided to the users so that they can access services on the cloud by using these APIs and pay the charges as per the usage of services."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "10:00",
+            "isDone": true
+         },
+         {
+            "title": "Cloud Computing Architecture",
+            "subTopicList": [
+               {
+                  "subTopic": "Cloud Computing Architecture",
+                  "subTopicContent": [
+                     "As we know, cloud computing technology is used by both small and large organizations to store the information in cloud and access it from anywhere at any time using the internet connection.",
+                     "Cloud computing architecture is a combination of service-oriented architecture and event-driven architecture.",
+                     "Cloud computing architecture is divided into the following two parts:",
+                     "- Front End",
+                     "- Back End",
+                     "The below diagram shows the architecture of cloud computing -",
+                     "image.png",
+                     "Front End - The front end is used by the client. It contains client-side interfaces and applications that are required to access the cloud computing platforms. The front end includes web servers (including Chrome, Firefox, internet explorer, etc.), thin & fat clients, tablets, and mobile devices.",
+                     "Back End - The back end is used by the service provider. It manages all the resources that are required to provide cloud computing services. It includes a huge amount of data storage, security mechanism, virtual machines, deploying models, servers, traffic control mechanisms, etc.",
+                     "Note - Both front end and back end are connected to others through a network, generally using the internet connection."
+                  ]
+               },
+               {
+                  "subTopic": "Components of Cloud Computing Architecture",
+                  "subTopicContent": [
+                     "- Client Infrastructure: Client Infrastructure is a Front-end component. It provides GUI (Graphical User Interface) to interact with the cloud.",
+                     "- Application: The application may be any software or platform that a client wants to access.",
+                     "- Service: A Cloud Services manages that which type of service you access according to the client's requirement."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "10:00",
+            "isDone": true
+         },
+         {
+            "title": "Types of Services in Cloud Computing",
+            "subTopicList": [
+               {
+                  "subTopic": "Cloud computing offers the following three type of services",
+                  "subTopicContent": [
+                     "Software as a Service (SaaS) - It is also known as cloud application services. Mostly, SaaS applications run directly through the web browser means we do not require to download and install these applications. Some important examples of SaaS are given below -",
+                     "Example: Google Apps, Salesforce Dropbox, Slack, HubSpot, Cisco WebEx.",
+                     "Platform as a Service (PaaS) – It is also known as cloud platform services. It is quite like SaaS, but the difference is that PaaS provides a platform for software creation, but using SaaS, we can access software over the internet without the need of any platform.",
+                     "Example: Windows Azure, Force.com, Magento Commerce Cloud, OpenShift.",
+                     "Infrastructure as a Service (IaaS) – It is also known as cloud infrastructure services. It is responsible for managing applications data, middleware, and runtime environments.",
+                     "Example: Amazon Web Services (AWS) EC2, Google Compute Engine (GCE), Cisco Metapod."
+                  ]
+               },
+               {
+                  "subTopic": "Other services in Cloud Computing",
+                  "subTopicContent": [
+                     "Runtime Cloud - Runtime Cloud provides the execution and runtime environment to the virtual machines.",
+                     "Storage - Storage is one of the most important components of cloud computing. It provides a huge amount of storage capacity in the cloud to store and manage data.",
+                     "Infrastructure - It provides services on the host level, application level, and network level. Cloud infrastructure includes hardware and software components such as servers, storage, network devices, virtualization software, and other storage resources that are needed to support the cloud computing model.",
+                     "Management - Management is used to manage components such as application, service, runtime cloud, storage, infrastructure, and other security issues in the backend and establish coordination between them.",
+                     "Security - Security is an in-built back-end component of cloud computing. It implements a security mechanism in the back end.",
+                     "Internet - The Internet is medium through which front end and back end can interact and communicate with each other."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "10:00",
+            "isDone": true
+         }
+      ]
+   },
+   {
+      "id": 2,
+      "title": "Supervised Machine Learning: Regression and Classification",
+      "category": [
+         "machine learning",
+         "python",
+         "regression",
+         "deep learning",
+         "data science",
+         "artificial intelligence",
+         "history",
+         "data mining",
+         "naive bayes classifier"
+      ],
+      "ratings": "3.5",
+      "author": "Flutter Poppins",
+      "authorImage": "assets/images/angelo.jpg",
+      "courseImage": "assets/images/course1.png",
+      "shortDescription": "Machine Learning",
+      "description": [
+         "Machine Learning tutorial provides basic and advanced concepts of machine learning. Our machine learning tutorial is designed for students and working professionals.",
+         "Machine learning is a growing technology which enables computers to learn automatically from past data. Machine learning uses various algorithms for building mathematical models and making predictions using historical data or information. Currently, it is being used for various tasks such as image recognition, speech recognition, email filtering, Facebook auto-tagging, recommender system, and many more.",
+         "This machine learning tutorial gives you an introduction to machine learning along with the wide range of machine learning techniques such as Supervised, Unsupervised, and Reinforcement learning. You will learn about regression and classification models, clustering methods, hidden Markov models, and various sequential models."
+      ],
+      "contents": [
+         {
+            "title": "Introduction",
+            "subTopicList": [
+               {
+                  "subTopic": "What is Machine Learning?",
+                  "subTopicContent": [
+                     "Machine Learning is said as a subset of artificial intelligence that is mainly concerned with the development of algorithms which allow a computer to learn from the data and past experiences on their own. The term machine learning was first introduced by Arthur Samuel in 1959. We can define it in a summarized way as:",
+                     "“Machine learning enables a machine to automatically learn from data, improve performance from experiences, and predict things without being explicitly programmed.”",
+                     "With the help of sample historical data, which is known as training data, machine learning algorithms build a mathematical model that helps in making predictions or decisions without being explicitly programmed. Machine learning brings computer science and statistics together for creating predictive models. Machine learning constructs or uses the algorithms that learn from historical data. The more we will provide the information, the higher will be the performance.",
+                     "A machine has the ability to learn if it can improve its performance by gaining more data."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "4:00",
+            "isDone": true
+         },
+         {
+            "title": "How does Machine Learning work",
+            "subTopicList": [
+               {
+                  "subTopic": "How does Machine Learning work?",
+                  "subTopicContent": [
+                     "A Machine Learning system learns from historical data, builds the prediction models, and whenever it receives new data, predicts the output for it. The accuracy of predicted output depends upon the amount of data, as the huge amount of data helps to build a better model which predicts the output more accurately.",
+                     "Suppose we have a complex problem, where we need to perform some predictions, so instead of writing a code for it, we just need to feed the data to generic algorithms, and with the help of these algorithms, machine builds the logic as per the data and predict the output. Machine learning has changed our way of thinking about the problem. The below block diagram explains the working of Machine Learning algorithm:",
+                     "image.png"
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "2:00",
+            "isDone": true
+         },
+         {
+            "title": "Features of Machine Learning",
+            "subTopicList": [
+               {
+                  "subTopic": "What are the features of Machine Learning?",
+                  "subTopicContent": [
+                     "- Machine learning uses data to detect various patterns in a given dataset.",
+                     "- It can learn from past data and improve automatically.",
+                     "- It is a data-driven technology.",
+                     "- Machine learning is much similar to data mining as it also deals with the huge amount of the data."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "4:00",
+            "isDone": true
+         },
+         {
+            "title": "Need for Machine Learning",
+            "subTopicList": [
+               {
+                  "subTopic": "What are the needs for Machine Learning?",
+                  "subTopicContent": [
+                     "The need for machine learning is increasing day by day. The reason behind the need for machine learning is that it is capable of doing tasks that are too complex for a person to implement directly. As a human, we have some limitations as we cannot access the huge amount of data manually, so for this, we need some computer systems and here comes the machine learning to make things easy for us.",
+                     "We can train machine learning algorithms by providing them the huge amount of data and let them explore the data, construct the models, and predict the required output automatically. The performance of the machine learning algorithm depends on the amount of data, and it can be determined by the cost function. With the help of machine learning, we can save both time and money.",
+                     "The importance of machine learning can be easily understood by its uses cases, Currently, machine learning is used in self-driving cars, cyber fraud detection, face recognition, and friend suggestion by Facebook, etc. Various top companies such as Netflix and Amazon have built machine learning models that are using a vast amount of data to analyze the user interest and recommend product accordingly."
+                  ]
+               },
+               {
+                  "subTopic": "Importance of Machine Learning",
+                  "subTopicContent": [
+                     "Following are some key points which show the importance of Machine Learning:",
+                     "- Rapid increment in the production of data",
+                     "- Solving complex problems, which are difficult for a human.",
+                     "- Decision making in various sector including finance.",
+                     "- Finding hidden patterns and extracting useful information from data."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "10:00",
+            "isDone": true
+         },
+         {
+            "title": "Classification of Machine Learning",
+            "subTopicList": [
+               {
+                  "subTopic": "What are the classification of Machine Learning?",
+                  "subTopicContent": [
+                     "At a broad level, machine learning can be classified into three types:",
+                     "1.Supervised learning",
+                     "2.Unsupervised learning",
+                     "3.Reinforcement learning"
+                  ]
+               },
+               {
+                  "subTopic": "1)   Supervised Learning",
+                  "subTopicContent": [
+                     "Supervised learning is a type of machine learning method in which we provide sample labeled data to the machine learning system in order to train it, and on that basis, it predicts the output.",
+                     "The system creates a model using labeled data to understand the datasets and learn about each data, once the training and processing are done then we test the model by providing a sample data to check whether it is predicting the exact output or not.",
+                     "The goal of supervised learning is to map input data with the output data. The supervised learning is based on supervision, and it is the same as when a student learns things in the supervision of the teacher. The example of supervised learning is spam filtering.",
+                     "Supervised learning can be grouped further in two categories of algorithms:",
+                     "- Classification",
+                     "- Regression"
+                  ]
+               },
+               {
+                  "subTopic": "2)   Unsupervised Learning",
+                  "subTopicContent": [
+                     "Unsupervised learning is a learning method in which a machine learns without any supervision.",
+                     "The training is provided to the machine with the set of data that has not been labeled, classified, or categorized, and the algorithm needs to act on that data without any supervision. The goal of unsupervised learning is to restructure the input data into new features or a group of objects with similar patterns.",
+                     "In unsupervised learning, we don't have a predetermined result. The machine tries to find useful insights from the huge amount of data. It can be further classifieds into two categories of algorithms:",
+                     "- Clustering",
+                     "- Association"
+                  ]
+               },
+               {
+                  "subTopic": "3)   Reinforcement Learning",
+                  "subTopicContent": [
+                     "Reinforcement learning is a feedback-based learning method, in which a learning agent gets a reward for each right action and gets a penalty for each wrong action. The agent learns automatically with these feedbacks and improves its performance. In reinforcement learning, the agent interacts with the environment and explores it. The goal of an agent is to get the most reward points, and hence, it improves its performance.",
+                     "Example: The robotic dog, which automatically learns the movement of his arms, is an example of Reinforcement learning."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "10:00",
+            "isDone": true
+         },
+         {
+            "title": "History of Machine Learning",
+            "subTopicList": [
+               {
+                  "subTopic": "The early history of Machine Learning (Pre-1940):",
+                  "subTopicContent": [
+                     "Before some years (about 40-50 years), machine learning was science fiction, but today it is the part of our daily life. Machine learning is making our day-to-day life easy from self-driving cars to Amazon virtual assistant Alexa. However, the idea behind machine learning is so old and has a long history. Below some milestones are given which have occurred in the history of machine learning:",
+                     "1834: In 1834, Charles Babbage, the father of the computer, conceived a device that could be programmed with punch cards. However, the machine was never built, but all modern computers rely on its logical structure.",
+                     "1936: In 1936, Alan Turing gave a theory that how a machine can determine and execute a set of instructions."
+                  ]
+               },
+               {
+                  "subTopic": "The era of stored program computers:",
+                  "subTopicContent": [
+                     "1940: In 1940, the first manually operated computer, ENIAC was invented, which was the first electronic general-purpose computer. After that stored program computer such as EDSAC in 1949 and EDVAC in 1951 were invented.",
+                     "1943: In 1943, a human neural network was modeled with an electrical circuit. In 1950, the scientists started applying their idea to work and analyzed how human neurons might work."
+                  ]
+               },
+               {
+                  "subTopic": "Computer machinery and intelligence:",
+                  "subTopicContent": [
+                     "1950: In 1950, Alan Turing published a seminal paper, Computer Machinery and Intelligence, on the topic of artificial intelligence. In his paper, he asked, Can machines think?"
+                  ]
+               },
+               {
+                  "subTopic": "Machine intelligence in Games:",
+                  "subTopicContent": [
+                     "1952: Arthur Samuel, who was the pioneer of machine learning, created a program that helped an IBM computer to play a checkers game. It performed better more it played.",
+                     "1959: In 1959, the term Machine Learning was first coined by Arthur Samuel."
+                  ]
+               },
+               {
+                  "subTopic": "The first AI winter:",
+                  "subTopicContent": [
+                     "The duration of 1974 to 1980 was the tough time for AI and ML researchers, and this duration was called as AI winter.",
+                     "In this duration, failure of machine translation occurred, and people had reduced their interest from AI, which led to reduced funding by the government to the research."
+                  ]
+               },
+               {
+                  "subTopic": "Machine Learning from theory to reality",
+                  "subTopicContent": [
+                     "1959: In 1959, the first neural network was applied to a real-world problem to remove echoes over phone lines using an adaptive filter.",
+                     "1985: In 1985, Terry Sejnowski and Charles Rosenberg invented a neural network NETtalk, which was able to teach itself how to correctly pronounce 20,000 words in one week.",
+                     "1997: The IBM's Deep blue intelligent computer won the chess game against the chess expert Garry Kasparov, and it became the first computer which had beaten a human chess expert."
+                  ]
+               },
+               {
+                  "subTopic": "Machine Learning at 21st century",
+                  "subTopicContent": [
+                     "2006: In the year 2006, computer scientist Geoffrey Hinton has given a new name to neural net research as deep learning, and nowadays, it has become one of the most trending technologies.",
+                     "2012: In 2012, Google created a deep neural network which learned to recognize the image of humans and cats in YouTube videos.",
+                     "2014: In 2014, the Chabot Eugen Goostman cleared the Turing Test. It was the first Chabot who convinced the 33% of human judges that it was not a machine.",
+                     "2014: DeepFace was a deep neural network created by Facebook, and they claimed that it could recognize a person with the same precision as a human can do.",
+                     "2016: AlphaGo beat the world's number second player Lee Sedol at Go game. In 2017 it beat the number one player of this game Ke Jie.",
+                     "2017: In 2017, the Alphabet's Jigsaw team built an intelligent system that was able to learn the online trolling. It used to read millions of comments of different websites to learn to stop online trolling."
+                  ]
+               },
+               {
+                  "subTopic": "Machine Learning at present:",
+                  "subTopicContent": [
+                     "Now machine learning has got a great advancement in its research, and it is present everywhere around us, such as self-driving cars, Amazon Alexa, Catboats, recommender system, and many more. It includes Supervised, unsupervised, and Reinforcement learning with clustering, classification, decision tree, SVM algorithms, etc.",
+                     "Modern machine learning models can be used for making various predictions, including weather prediction, disease prediction, stock market analysis, etc."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "20:00",
+            "isDone": true
+         }
+      ]
+   },
+   {
+      "id": 3,
+      "title": "Data Mining Foundations and Practice Specialization",
       "category": [
          "data mining",
          "statistics",
@@ -11,14 +373,13 @@
          "python",
          "deep learning",
          "classifier",
-         "random forest",
-         "data analysis"
+         "random forest"
       ],
-      "author": "John Angelo B. Silvestre",
-      "authorImage": "assets/images/angelo1.jpg",
-      "courseImage": "assets/images/angelo1.jpg",
-      "shortDescription": "Short description",
-      "ratings": "4.5",
+      "ratings": "5",
+      "author": "Qin (Christine) Lv",
+      "authorImage": "assets/images/angelo.jpg",
+      "courseImage": "assets/images/course1.png",
+      "shortDescription": "Data Mining",
       "description": [
          "The data mining tutorial provides basic and advanced concepts of data mining. Our data mining tutorial is designed for learners and experts.",
          "Data mining is one of the most useful techniques that help entrepreneurs, researchers, and individuals to extract valuable information from huge sets of data. Data mining is also called Knowledge Discovery in Database (KDD). The knowledge discovery process includes Data cleaning, Data integration, Data selection, Data transformation, Data mining, Pattern evaluation, and Knowledge presentation.",
@@ -35,15 +396,148 @@
                      "In other words, we can say that Data Mining is the process of investigating hidden patterns of information to various perspectives for categorization into useful data, which is collected and assembled in particular areas such as data warehouses, efficient analysis, data mining algorithm, helping decision making and other data requirement to eventually cost-cutting and generating revenue.",
                      "Data mining is the act of automatically searching for large stores of information to find trends and patterns that go beyond simple analysis procedures. Data mining utilizes complex mathematical algorithms for data segments and evaluates the probability of future events. Data Mining is also called Knowledge Discovery of Data (KDD).",
                      "Data Mining is a process used by organizations to extract specific data from huge databases to solve business problems. It primarily turns raw data into useful information.",
-                     "Data Mining is similar to Data Science carried out by a person, in a specific situation, on a particular data set, with an objective. This process includes various types of services such as text mining, web mining, audio and video mining, pictorial data mining, and social media mining. It is done through software that is simple or highly specific. By outsourcing data mining, all the work can be done faster with low operation costs. Specialized firms can also use new technologies to collect data that is impossible to locate manually. There are tons of information available on various platforms, but very little knowledge is accessible. The biggest challenge is to analyze the data to extract important information that can be used to solve a problem or for company development. There are many powerful instruments and techniques available to mine data and find better insight from it. How does Machine Learning work"
-                  ],
-                  "subTopic": "What is Data Mining?",
+                     "Data Mining is similar to Data Science carried out by a person, in a specific situation, on a particular data set, with an objective. This process includes various types of services such as text mining, web mining, audio and video mining, pictorial data mining, and social media mining. It is done through software that is simple or highly specific. By outsourcing data mining, all the work can be done faster with low operation costs. Specialized firms can also use new technologies to collect data that is impossible to locate manually. There are tons of information available on various platforms, but very little knowledge is accessible. The biggest challenge is to analyze the data to extract important information that can be used to solve a problem or for company development. There are many powerful instruments and techniques available to mine data and find better insight from it. How does Machine Learning work",
+                     "image.png"
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "8:00",
+            "isDone": true
+         },
+         {
+            "title": "Types of Data Mining",
+            "subTopicList": [
+               {
+                  "subTopic": "What are the types of Data Mining?",
                   "subTopicContent": [
-                     "The process of extracting information to identify patterns, trends, and useful data that would allow the business to take the data-driven decision from huge sets of data is called Data Mining.",
-                     "In other words, we can say that Data Mining is the process of investigating hidden patterns of information to various perspectives for categorization into useful data, which is collected and assembled in particular areas such as data warehouses, efficient analysis, data mining algorithm, helping decision making and other data requirement to eventually cost-cutting and generating revenue.",
-                     "Data mining is the act of automatically searching for large stores of information to find trends and patterns that go beyond simple analysis procedures. Data mining utilizes complex mathematical algorithms for data segments and evaluates the probability of future events. Data Mining is also called Knowledge Discovery of Data (KDD).",
-                     "Data Mining is a process used by organizations to extract specific data from huge databases to solve business problems. It primarily turns raw data into useful information.",
-                     "Data Mining is similar to Data Science carried out by a person, in a specific situation, on a particular data set, with an objective. This process includes various types of services such as text mining, web mining, audio and video mining, pictorial data mining, and social media mining. It is done through software that is simple or highly specific. By outsourcing data mining, all the work can be done faster with low operation costs. Specialized firms can also use new technologies to collect data that is impossible to locate manually. There are tons of information available on various platforms, but very little knowledge is accessible. The biggest challenge is to analyze the data to extract important information that can be used to solve a problem or for company development. There are many powerful instruments and techniques available to mine data and find better insight from it. How does Machine Learning work"
+                     "Relational Database: A relational database is a collection of multiple data sets formally organized by tables, records, and columns from which data can be accessed in various ways without having to recognize the database tables. Tables convey and share information, which facilitates data searchability, reporting, and organization.",
+                     "Data Warehouses: A Data Warehouse is the technology that collects the data from various sources within the organization to provide meaningful business insights. The huge amount of data comes from multiple places such as Marketing and Finance. The extracted data is utilized for analytical purposes and helps in decision- making for a business organization. The data warehouse is designed for the analysis of data rather than transaction processing.",
+                     "Data Repositories: The Data Repository generally refers to a destination for data storage. However, many IT professionals utilize the term more clearly to refer to a specific kind of setup within an IT structure. For example, a group of databases, where an organization has kept various kinds of information.",
+                     "Object-Relational Database: A combination of an object-oriented database model and relational database model is called an object-relational model. It supports Classes, Objects, Inheritance, etc.",
+                     "One of the primary objectives of the Object-relational data model is to close the gap between the Relational database and the object-oriented model practices frequently utilized in many programming languages, for example, C++, Java, C#, and so on.",
+                     "Transactional Database: A transactional database refers to a database management system (DBMS) that has the potential to undo a database transaction if it is not performed appropriately. Even though this was a unique capability a very long while back, today, most of the relational database systems support transactional database activities."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "8:00",
+            "isDone": true
+         },
+         {
+            "title": "Advantages of Data Mining",
+            "subTopicList": [
+               {
+                  "subTopic": "What are the advantages of Data Mining?",
+                  "subTopicContent": [
+                     "- The Data Mining technique enables organizations to obtain knowledge-based data.",
+                     "- Data mining enables organizations to make lucrative modifications in operation and production.",
+                     "- Compared with other statistical data applications, data mining is cost-efficient.",
+                     "- Data Mining helps the decision-making process of an organization.",
+                     "- It Facilitates the automated discovery of hidden patterns as well as the prediction of trends and behaviors.",
+                     "- It can be induced in the new system as well as the existing platforms.",
+                     "- It is a quick process that makes it easy for new users to analyze enormous amounts of data in a short time."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "8:00",
+            "isDone": true
+         },
+         {
+            "title": "Disadvantages of Data Mining",
+            "subTopicList": [
+               {
+                  "subTopic": "What are the disadvantages of Data Mining?",
+                  "subTopicContent": [
+                     "- There is a probability that the organizations may sell useful data of customers to other organizations for money. As per the report, American Express has sold credit card purchases of their customers to other organizations.",
+                     "- Many data mining analytics software is difficult to operate and needs advance training to work on.",
+                     "- Different data mining instruments operate in distinct ways due to the different algorithms used in their design. Therefore, the selection of the right data mining tools is a very challenging task.",
+                     "- The data mining techniques are not precise, so that it may lead to severe consequences in certain conditions."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "6:00",
+            "isDone": true
+         },
+         {
+            "title": "Data Mining Applications",
+            "subTopicList": [
+               {
+                  "subTopic": "These are the following areas where data mining is widely used:",
+                  "subTopicContent": [
+                     "image.png",
+                     "Data Mining in Healthcare: Data mining in healthcare has excellent potential to improve the health system. It uses data and analytics for better insights and to identify best practices that will enhance health care services and reduce costs. Analysts use data mining approaches such as Machine learning, multi-dimensional database, Data visualization, soft computing, and statistics. Data Mining can be used to forecast patients in each category. The procedures ensure that the patients get intensive care at the right place and at the right time. Data mining also enables healthcare insurers to recognize fraud and abuse.",
+                     "Data Mining in Market Basket Analysis: Market basket analysis is a modeling method based on a hypothesis. If you buy a specific group of products, then you are more likely to buy another group of products. This technique may enable the retailer to understand the purchase behavior of a buyer. This data may assist the retailer in understanding the requirements of the buyer and altering the store's layout accordingly. Using a different analytical comparison of results between various stores, between customers in different demographic groups can be done.",
+                     "Data Mining in Education: Education data mining is a newly emerging field, concerned with developing techniques that explore knowledge from the data generated from educational Environments. EDM objectives are recognized as affirming student's future learning behavior, studying the impact of educational support, and promoting learning science. An organization can use data mining to make precise decisions and also to predict the results of the student. With the results, the institution can concentrate on what to teach and how to teach.",
+                     "Data Mining in Manufacturing Engineering: Knowledge is the best asset possessed by a manufacturing company. Data mining tools can be beneficial to find patterns in a complex manufacturing process. Data mining can be used in system-level designing to obtain the relationships between product architecture, product portfolio, and data needs of the customers. It can also be used to forecast the product development period, cost, and expectations among the other tasks.",
+                     "Data Mining in CRM (Customer Relationship Management): Customer Relationship Management (CRM) is all about obtaining and holding Customers, also enhancing customer loyalty and implementing customer-oriented strategies. To get a decent relationship with the customer, a business organization needs to collect data and analyze the data. With data mining technologies, the collected data can be used for analytics.",
+                     "Data Mining in Fraud Detection: Billions of dollars are lost to the action of frauds. Traditional methods of fraud detection are a little bit time consuming and sophisticated. Data mining provides meaningful patterns and turning data into information. An ideal fraud detection system should protect the data of all the users. Supervised methods consist of a collection of sample records, and these records are classified as fraudulent or non-fraudulent. A model is constructed using this data, and the technique is made to identify whether the document is fraudulent or not.",
+                     "Data Mining in Lie Detection: Apprehending a criminal is not a big deal, but bringing out the truth from him is a very challenging task. Law enforcement may use data mining techniques to investigate offenses, monitor suspected terrorist communications, etc. This technique includes text mining also, and it seeks meaningful patterns in data, which is usually unstructured text. The information collected from the previous investigations is compared, and a model for lie detection is constructed.",
+                     "Data Mining Financial Banking: The Digitalization of the banking system is supposed to generate an enormous amount of data with every new transaction. The data mining technique can help bankers by solving business-related problems in banking and finance by identifying trends, casualties, and correlations in business information and market costs that are not instantly evident to managers or executives because the data volume is too large or are produced too rapidly on the screen by experts. The manager may find these data for better targeting, acquiring, retaining, segmenting, and maintain a profitable customer."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "12:00",
+            "isDone": true
+         },
+         {
+            "title": "Challenges of Implementation in Data Mining",
+            "subTopicList": [
+               {
+                  "subTopic": "Challenges of Implementation in Data Mining",
+                  "subTopicContent": [
+                     "Although data mining is very powerful, it faces many challenges during its execution. Various challenges could be related to performance, data, methods, and techniques, etc. The process of data mining becomes effective when the challenges or problems are correctly recognized and adequately resolved.",
+                     "image.png",
+                     "Incomplete and noisy data: The process of extracting useful data from large volumes of data is data mining. The data in the real-world is heterogeneous, incomplete, and noisy. Data in huge quantities will usually be inaccurate or unreliable. These problems may occur due to data measuring instrument or because of human errors. Suppose a retail chain collects phone numbers of customers who spend more than $ 500, and the accounting employees put the information into their system. The person may make a digit mistake when entering the phone number, which results in incorrect data. Even some customers may not be willing to disclose their phone numbers, which results in incomplete data. The data could get changed due to human or system error. All these consequences (noisy and incomplete data) make data mining challenging.",
+                     "Data Distribution: Real-worlds data is usually stored on various platforms in a distributed computing environment. It might be in a database, individual systems, or even on the internet. Practically, it is a quite tough task to make all the data to a centralized data repository mainly due to organizational and technical concerns. For example, various regional offices may have their servers to store their data. It is not feasible to store, all the data from all the offices on a central server. Therefore, data mining requires the development of tools and algorithms that allow the mining of distributed data.",
+                     "Complex Data: Real-world data is heterogeneous, and it could be multimedia data, including audio and video, images, complex data, spatial data, time series, and so on. Managing these various types of data and extracting useful information is a tough task. Most of the time, new technologies, new tools, and methodologies would have to be refined to obtain specific information.",
+                     "Performance: The data mining system's performance relies primarily on the efficiency of algorithms and techniques used. If the designed algorithm and techniques are not up to the mark, then the efficiency of the data mining process will be affected adversely.",
+                     "Data Privacy and Security: Data mining usually leads to serious issues in terms of data security, governance, and privacy. For example, if a retailer analyzes the details of the purchased items, then it reveals data about buying habits and preferences of the customers without their permission.",
+                     "Data Visualization: In data mining, data visualization is a very important process because it is the primary method that shows the output to the user in a presentable way. The extracted data should convey the exact meaning of what it intends to express. But many times, representing the information to the end-user in a precise and easy way is difficult. The input data and the output information being complicated, very efficient, and successful data visualization processes need to be implemented to make it successful."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "10:00",
+            "isDone": true
+         }
+      ]
+   },
+   {
+      "id": 4,
+      "title": "Blockchain Scalability and its Foundations in Distributed Systems",
+      "category": [
+         "programming",
+         "Trends",
+         "UI",
+         "Technology",
+         "Algorithm"
+      ],
+      "ratings": "5",
+      "author": "Mayyas Stuns",
+      "authorImage": "assets/images/angelo.jpg",
+      "courseImage": "assets/images/course1.png",
+      "shortDescription": "Blockchain",
+      "description": [
+         "Blockchain Tutorial provides basic and advanced concepts of blockchain. Blockchain is a constantly growing ledger that keeps a permanent record of all the transactions that have taken place in a secure, chronological, and immutable way. It can be used for the secure transfer of money, property, contracts, etc. without requiring a third-party intermediary such as a bank or government. Blockchain is a software protocol, but it could not be run without the Internet (like SMTP is for email)."
+      ],
+      "contents": [
+         {
+            "title": "Introduction",
+            "subTopicList": [
+               {
+                  "subTopic": "What is Blockchain?",
+                  "subTopicContent": [
+                     "A blockchain is a constantly growing ledger that keeps a permanent record of all the transactions that have taken place in a secure, chronological, and immutable way.",
+                     "-Ledger: It is a file that is constantly growing.",
+                     "-Permanent: It means once the transaction goes inside a blockchain, you can put up it permanently in the ledger",
+                     "-Secure: Blockchain securely placed information. It uses very advanced cryptography to make sure that the information is locked inside the blockchain.",
+                     "Chronological: Chronological means every transaction happens after the previous one.",
+                     "-Immutable: It means as you build all the transactions onto the blockchain, this ledger can never be changed.",
+                     "A blockchain is a chain of blocks that contain information. Each block records all of the recent transactions, and once completed goes into the blockchain as a permanent database. Each time a block gets completed; a new block is generated."
                   ]
                }
             ],
@@ -52,16 +546,501 @@
             "isDone": true
          },
          {
-            "title": "Introduction Luctions",
+            "title": "Who uses Blockchain?",
             "subTopicList": [
                {
-                  "subTopic": "What is Data Mining?",
+                  "subTopic": "Who uses Blockchain?",
                   "subTopicContent": [
-                     "The process of extracting information to identify patterns, trends, and useful data that would allow the business to take the data-driven decision from huge sets of data is called Data Mining.",
-                     "In other words, we can say that Data Mining is the process of investigating hidden patterns of information to various perspectives for categorization into useful data, which is collected and assembled in particular areas such as data warehouses, efficient analysis, data mining algorithm, helping decision making and other data requirement to eventually cost-cutting and generating revenue.",
-                     "Data mining is the act of automatically searching for large stores of information to find trends and patterns that go beyond simple analysis procedures. Data mining utilizes complex mathematical algorithms for data segments and evaluates the probability of future events. Data Mining is also called Knowledge Discovery of Data (KDD).",
-                     "Data Mining is a process used by organizations to extract specific data from huge databases to solve business problems. It primarily turns raw data into useful information.",
-                     "Data Mining is similar to Data Science carried out by a person, in a specific situation, on a particular data set, with an objective. This process includes various types of services such as text mining, web mining, audio and video mining, pictorial data mining, and social media mining. It is done through software that is simple or highly specific. By outsourcing data mining, all the work can be done faster with low operation costs. Specialized firms can also use new technologies to collect data that is impossible to locate manually. There are tons of information available on various platforms, but very little knowledge is accessible. The biggest challenge is to analyze the data to extract important information that can be used to solve a problem or for company development. There are many powerful instruments and techniques available to mine data and find better insight from it. How does Machine Learning work"
+                     "Blockchain technology can be integrated into multiple areas. The primary use of blockchains is as a distributed ledger for cryptocurrencies. It shows great promise across a wide range of business applications like Banking, Finance, Government, Healthcare, Insurance, Media and Entertainment, Retail, etc.",
+                     "Blockchain technology has become popular because of the following.",
+                     "-Time reduction: In the financial industry, blockchain can allow the quicker settlement of trades. It does not take a lengthy process for verification, settlement, and clearance. It is because of a single version of agreed-upon data available between all stakeholders.",
+                     "-Unchangeable transactions: Blockchain registers transactions in a chronological order which certifies the unalter ability of all operations, which means when a new block is added to the chain of ledgers, it cannot be removed or modified.",
+                     "-Reliability: Blockchain certifies and verifies the identities of each interested party. This removes double records, reduces rates, and accelerates transactions.",
+                     "-Security: Blockchain uses very advanced cryptography to make sure that the information is locked inside the blockchain. It uses Distributed Ledger Technology where each party holds a copy of the original chain, so the system remains operative, even if many other nodes fall.",
+                     "-Collaboration: It allows each party to transact directly with each other without requiring a third-party intermediary.",
+                     "-Decentralized: It is decentralized because there is no central authority supervising anything. There are standard rules on how every node exchange blockchain information. This method ensures that all transactions are validated, and all valid transactions are added one by one."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:35",
+            "isDone": true
+         },
+         {
+            "title": "Bitcoin",
+            "subTopicList": [
+               {
+                  "subTopic": "What is Bitcoin?",
+                  "subTopicContent": [
+                     "Satoshi Nakamoto introduced Bitcoin in the year 2008. Bitcoin is a cryptocurrency (virtual currency), or a digital currency that uses rules of cryptography for regulation and generation of units of currency. Bitcoin fell under the scope of cryptocurrency and became the first and most valuable among them. It is commonly called decentralized digital currency.",
+                     "A bitcoin is a type of digital asset that can be bought, sold, and transferred between two parties securely over the Internet. Bitcoin can be used to store values much like fine gold, silver, and some other type of investments. We can also use Bitcoin to buy products and services as well as make payments and exchange values electronically.",
+                     "A bitcoin is different from other traditional currencies such as Dollar, Pound, and Euro, which can also be used to buy things and exchange values electronically. There are no physical coins for bitcoins or paper bills. When you send Bitcoin to someone or used Bitcoin to buy anything, you dont need to use a bank, a credit card, or any other third party. Instead, you can simply send Bitcoin directly to another party over the internet securely and almost instantly."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:35",
+            "isDone": true
+         },
+         {
+            "title": "Blockchain Hash Function",
+            "subTopicList": [
+               {
+                  "subTopic": "Hash Function",
+                  "subTopicContent": [
+                     "A hash function takes an input string (numbers, alphabets, media files) of any length and transforms it into a fixed length. The fixed bit length can vary (like 32-bit or 64-bit or 128-bit or 256-bit) depending on the hash function which is being used. The fixed-length output is called a hash. This hash is also the cryptographic byproduct of a hash algorithm. We can understand it from the following diagram.",
+                     "For example, suppose you click on a photo that you want to send it to another person, so you can simply attach that photo to an email, type the receivers email address and send it. The other person will receive the photo, and you think it would end, but it is not. Now, we have two copies of the photo, one is a simple email, and another is an original file that is still on my computer. Here, we send a copy of the file of the photo, not the original file. This issue is commonly known as the double-spend problem.The hash algorithm has certain unique properties:",
+                     "1.It produces a unique output (or hash).",
+                     "2.It is a one-way function.",
+                     "In the context of cryptocurrencies like Bitcoin, the blockchain uses this cryptographic hash function's properties in its consensus mechanism. A cryptographic hash is a digest or digital fingerprint of a certain amount of data. In cryptographic hash functions, the transactions are taken as input and run through a hashing algorithm which gives an output of a fixed size."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:35",
+            "isDone": true
+         },
+         {
+            "title": "Blockchain Hash Function",
+            "subTopicList": [
+               {
+                  "subTopic": "SHA-256",
+                  "subTopicContent": [
+                     "A Bitcoin blockchain uses SHA-256 (Secure Hash Algorithm) hashing algorithm. In 2001, the SHA-256 Hashing algorithm was developed by the National Security Agency (NSA) in the USA."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:35",
+            "isDone": true
+         },
+         {
+            "title": "Blockchain Hash Function",
+            "subTopicList": [
+               {
+                  "subTopic": "How does the hashing process work?",
+                  "subTopicContent": [
+                     "For this hash function, we are going to use a program developed by Anders Brownworth. This program can be found in the below link.",
+                     "Anders Brownworth Hash Program: https://anders.com/blockchain/hash.html",
+                     "If we type any character in the data section, we will observe its corresponding cryptographic hash in the hash section.",
+                     "For example, we have typed in the data section: This is a great tutorial.",
+                     "It will generate the corresponding Hash:",
+                     "759831720aa978c890b11f62ae49d2417f600f26aaa51b3291a8d21a4216582a",
+                     "Now if we change the text: This is a great tutorial. To this is a great tutorial.",
+                     "You will find the corresponding Hash:",
+                     "4bc35380792eb7884df411ade1fa5fc3e82ab2da76f76dc83e1baecf48d60018",
+                     "In the above, you can see that we have changed only the first character case sentence from capital T to small t and it will change the whole Hash value.",
+                     "Since the Hash function is a one-way function, there is no way to get back entire text from the generated hash. This is different from traditional cryptographic functions like encryption where you can encrypt something using the key and by using decryption, you can decrypt the message to its original form."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:35",
+            "isDone": true
+         }
+      ]
+   },
+   {
+      "id": 5,
+      "title": "Object Oriented Development using C#",
+      "category": [
+         "C#",
+         "programming",
+         "Trends",
+         ".Net Framework",
+         "Infrastructure"
+      ],
+      "ratings": "4.0",
+      "author": "Sven Lappay",
+      "authorImage": "assets/images/lappay_prof1.png",
+      "courseImage": "assets/images/course1.png",
+      "shortDescription": "C#",
+      "description": [
+         "C# (pronounced See Sharp) is a modern, object-oriented, and type-safe programming language. C# enables developers to build many types of secure and robust applications that run in .NET. C# has its roots in the C family of languages and will be immediately familiar to C, C++, Java, and JavaScript programmers."
+      ],
+      "contents": [
+         {
+            "title": "Introduction",
+            "subTopicList": [
+               {
+                  "subTopic": "What is C#",
+                  "subTopicContent": [
+                     "C# tutorial provides basic and advanced concepts of C#. Our C# tutorial is designed for beginners and professionals.",
+                     "C# is a programming language of .Net Framework.",
+                     "Our C# tutorial includes all topics of C# such as first example, control statements, objects and classes, inheritance, constructor, destructor, this, static, sealed, polymorphism, abstraction, abstract class, interface, namespace, encapsulation, properties, indexer, arrays, strings, regex, exception handling, multithreading, File IO, Collections, etc.",
+                     "C# is pronounced as C-Sharp. It is an object-oriented programming language provided by Microsoft that runs on .Net Framework.",
+                     "With the help of C# programming language, we can develop different types of secured and robust applications:",
+                     "1. Window applications",
+                     "2. Web applications",
+                     "3. Distributed applications",
+                     "4. Web service applications",
+                     "5. Database applications etc."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:35",
+            "isDone": true
+         },
+         {
+            "title": "C# Variables",
+            "subTopicList": [
+               {
+                  "subTopic": "C# Variables",
+                  "subTopicContent": [
+                     "A variable is a name of memory location. It is used to store data. Its value can be changed and it can be reused many times.",
+                     "It is a way to represent memory location through symbol so that it can be easily identified.",
+                     "The basic variable type available in C# can be categorized as:",
+                     "Decimal Types, Boolean Types,Integral Types, Floating Types,Nullable Types"
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:35",
+            "isDone": true
+         },
+         {
+            "title": "C# Variable",
+            "subTopicList": [
+               {
+                  "subTopic": "Rules for Defining Variables ",
+                  "subTopicContent": [
+                     "A variable can have alphabets, digits and underscore.",
+                     "A variable name can start with alphabet and underscore only. It can't start with digit.",
+                     "No white space is allowed within variable name.",
+                     "A variable name must not be any reserved word or keyword e.g. char, float etc."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:35",
+            "isDone": true
+         },
+         {
+            "title": "Data Type",
+            "subTopicList": [
+               {
+                  "subTopic": "Value,Reference, & poiner Data type",
+                  "subTopicContent": [
+                     "The value data types are integer-based and floating-point based. C# language supports both signed and unsigned literals.",
+                     "There are 2 types of value data type in C# language.",
+                     "1.) Predefined Data Types - such as Integer, Boolean, Float, etc.",
+                     "2.) User defined Data Types - such as Structure, Enumerations, etc.",
+                     "The memory size of data types may change according to 32 or 64 bit operating system.",
+                     "The reference data types do not contain the actual data stored in a variable, but they contain a reference to the variables.",
+                     "If the data is changed by one of the variables, the other variable automatically reflects this change in value.",
+                     "There are 2 types of reference data type in C# language.",
+                     "2) User defined Types - such as Classes, Interface.",
+                     "The pointer in C# language is a variable, it is also known as locator or indicator that points to an address of a value.",
+                     "Declaring a pointer",
+                     "The pointer in C# language can be declared using * (asterisk symbol).",
+                     "int * a;  //pointer to int",
+                     "char * c; //pointer to char  "
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:35",
+            "isDone": true
+         },
+         {
+            "title": "C# Operators",
+            "subTopicList": [
+               {
+                  "subTopic": "Precedence of Operators in C#",
+                  "subTopicContent": [
+                     "The precedence of operator specifies that which operator will be evaluated first and next. The associativity specifies the operators direction to be evaluated, it may be left to right or right to left.",
+                     "Unary, Additive-  + - ! ~ ++ -- (type)* & size of",
+                     "Multiplicative- + -",
+                     "Relational- & / *",
+                     "Shift- < < > >",
+                     "Equality- == !=",
+                     "Logical AND- &",
+                     "Logical OR- |",
+                     "Logical XOR- ^",
+                     "Conditonal OR- ||",
+                     "Conditional AND- &&",
+                     "Null Coalescing- ??",
+                     "Ternary- ?:",
+                     "Assignmnent- = *= /= %= += -= <<=>> = & ^ = |= =>"
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:35",
+            "isDone": true
+         },
+         {
+            "title": ".Net Framework",
+            "subTopicList": [
+               {
+                  "subTopic": "Four main components of .Net Framework ",
+                  "subTopicContent": [
+                     "NET is a framework to develop software applications. It is designed and developed by Microsoft and the first beta version released in 2000. It is used to develop applications for web, Windows, phone. Moreover, it provides a broad range of functionalities and support. This framework contains a large number of class libraries known as Framework Class Library (FCL). The software programs written in .NET are executed in the execution environment, which is called CLR (Common Language Runtime). These are the core and essential parts of the .NET framework. This framework provides various services like memory management, networking, security, memory management, and type-safety. The .Net Framework supports more than 60 programming languages such as C#, F#, VB.NET, J#, VC++, JScript.NET, APL, COBOL, Perl, Oberon, ML, Pascal, Eiffel, Smalltalk, Python, Cobra, ADA, etc.",
+                     "Following is the .NET framework Stack that shows the modules and components of the Framework.",
+                     "1.Common Language Runtime (CLR)",
+                     "2.Framework Class Library (FCL),",
+                     "3.Core Languages (WinForms, ASP.NET, and ADO.NET), and",
+                     "4.Other Modules (WCF, WPF, WF, Card Space, LINQ, Entity Framework, Parallel LINQ, Task Parallel Library, etc.)"
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:35",
+            "isDone": true
+         },
+         {
+            "title": "Components of .Net Framwork",
+            "subTopicList": [
+               {
+                  "subTopic": "Common Language Runtime(CLR) & Framework Class Library(FCL",
+                  "subTopicContent": [
+                     "CLR (Common Language Runtime)",
+                     "It is a program execution engine that loads and executes the program. It converts the program into native code. It acts as an interface between the framework and operating system. It does exception handling, memory management, and garbage collection. Moreover, it provides security, type-safety, interoperability, and portablility. A list of CLR components are given below:",
+                     "Source Code (Net Technologies)",
+                     ".net Language Compiler",
+                     "Msl & Meta Data",
+                     "CLR (JIT)",
+                     "Native Code"
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:35",
+            "isDone": true
+         },
+         {
+            "title": "Core Languages ",
+            "subTopicList": [
+               {
+                  "subTopic": "Core Languages ",
+                  "subTopicContent": [
+                     "WinFroms- Windows Forms is a smart client technology for the .NET Framework, a set of managed libraries that simplify common application tasks such as reading and writing to the file system.",
+                     "ASP.NET- ASP.NET is a web framework designed and developed by Microsoft. It is used to develop websites, web applications, and web services. It provides a fantastic integration of HTML, CSS, and JavaScript. It was first released in January 2002.",
+                     "ADO.NET- ADO.NET is a module of .Net Framework, which is used to establish a connection between application and data sources. Data sources can be such as SQL Server and XML. ADO .NET consists of classes that can be used to connect, retrieve, insert, and delete data.",
+                     "WPF (Windows Presentation Foundation)- Windows Presentation Foundation (WPF) is a graphical subsystem by Microsoft for rendering user interfaces in Windows-based applications. WPF, previously known as Avalon, was initially released as part of .NET Framework 3.0 in 2006. WPF uses DirectX.",
+                     "WCF (Windows Communication Foundation)- It is a framework for building service-oriented applications. Using WCF, you can send data as asynchronous messages from one service endpoint to another.",
+                     "WF (Workflow Foundation)- Windows Workflow Foundation (WF) is a Microsoft technology that provides an API, an in-process workflow engine, and a re-hostable designer to implement long-running processes as workflows within .NET applications.",
+                     "LINQ (Language Integrated Query)- It is a query language, introduced in .NET 3.5 framework. It is used to make the query for data sources with C# or Visual Basics programming languages.",
+                     "Entity Framework- It is an ORM based open source framework which is used to work with a database using .NET objects. It eliminates a lot of developers effort to handle the database. It is Microsoft's recommended technology to deal with the database.",
+                     "Parallel LINQ- Parallel LINQ or PLINQ is a parallel implementation of LINQ to objects. It combines the simplicity and readability of LINQ and provides the power of parallel programming. It can improve and provide fast speed to execute the LINQ query by using all available computer capabilities. Apart from the above features and libraries, .NET includes other APIs and Model to improve and enhance the .NET framework. In 2015, Task parallel and Task parallel libraries were added. In .NET 4.5, a task-based asynchronous model was added."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:35",
+            "isDone": true
+         }
+      ]
+   },
+   {
+      "id": 6,
+      "title": "JavaScript for Beginners",
+      "category": [
+         "JavaScript",
+         "programming",
+         "Trends",
+         "Debugging"
+      ],
+      "ratings": "5",
+      "author": "John Smigla",
+      "authorImage": "assets/images/angelo.jpg",
+      "courseImage": "assets/images/course1.png",
+      "shortDescription": "JavaScript",
+      "description": [
+         "While HTML and CSS control the content and styling of a page, JavaScript is used to make it interactive. In the JavaScript Algorithm and Data Structures Certification, you'll learn the fundamentals of JavaScript including variables, arrays, objects, loops, and functions. Once you have the fundamentals down, you'll apply that knowledge by creating algorithms to manipulate strings, factorialize numbers, and even calculate the orbit of the International Space Station."
+      ],
+      "contents": [
+         {
+            "title": "Introduction",
+            "subTopicList": [
+               {
+                  "subTopic": "Comment your JavaScript Code",
+                  "subTopicContent": [
+                     "Comments are lines of code that JavaScript will intentionally ignore. Comments are a great way to leave notes to yourself and to other people who will later need to figure out what that code does. There are two ways to write comments in JavaScript:",
+                     "Using // will tell JavaScript to ignore the remainder of the text on the current line. This is an in-line comment:",
+                     "// This is an in-line comment.",
+                     "You can make a multi-line comment beginning with /* and ending with */. This is a multi-line comment:",
+                     "/* This is a",
+                     "multi-line comment */"
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:35",
+            "isDone": true
+         },
+         {
+            "title": "Features of JavaScript ",
+            "subTopicList": [
+               {
+                  "subTopic": "Features of JavaScript",
+                  "subTopicContent": [
+                     "There are following features of JavaScript:",
+                     "1. All popular web browsers support JavaScript as they provide built-in execution environments.",
+                     "2. JavaScript follows the syntax and structure of the C programming language. Thus, it is a structured programming language.",
+                     "3. JavaScript is a weakly typed language, where certain types are implicitly cast (depending on the operation).",
+                     "4. JavaScript is an object-oriented programming language that uses prototypes rather than using classes for inheritance. ",
+                     "5. It is a light-weighted and interpreted language.",
+                     "6. It is a case-sensitive language.",
+                     "7. JavaScript is supportable in several operating systems including, Windows, macOS, etc.",
+                     "8. It provides good control to the users over the web browsers."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:35",
+            "isDone": true
+         },
+         {
+            "title": "JavaScript Basics",
+            "subTopicList": [
+               {
+                  "subTopic": "JavaScript Basics",
+                  "subTopicContent": [
+                     "JavaSCript Comment - The JavaScript comments are meaningful way to deliver message. It is used to add information about the code, warnings or suggestions so that end user can easily interpret the code.",
+                     "The JavaScript comment is ignored by the JavaScript engine i.e. embedded in the browser.",
+                     "Types of JavaScript Comments- Single-line and Multiline Comment",
+                     "JavaScript Variable- A JavaScript variable is simply a name of storage location. There are two types of variables in JavaScript : local variable and global variable.",
+                     "There are some rules while declaring a JavaScript variable (also known as identifiers). ",
+                     "1. Name must start with a letter (a to z or A to Z), underscore( _ ), or dollar( $ ) sign.",
+                     "2. After first letter we can use digits (0 to 9), for example value1.",
+                     "3. JavaScript variables are case sensitive, for example x and X are different variables.",
+                     "JavaScript Data types- JavaScript provides different data types to hold different types of values. There are two types of data types in JavaScript.",
+                     "1. Primitive data type",
+                     "Non-primitive (reference) data type",
+                     "JavaScript is a dynamic type language, means you don't need to specify type of the variable because it is dynamically used by JavaScript engine. You need to use var here to specify the data type. It can hold any type of values such as numbers, strings etc."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:35",
+            "isDone": true
+         },
+         {
+            "title": "JavaScript Objects",
+            "subTopicList": [
+               {
+                  "subTopic": "JavaScript Objects",
+                  "subTopicContent": [
+                     "A javaScript object is an entity having state and behavior (properties and method). For example: car, pen, bike, chair, glass, keyboard, monitor etc. JavaScript is an object-based language. Everything is an object in JavaScript. JavaScript is template based not class based. Here, we don't create class to get the object. But, we direct create objects. ",
+                     "Creating Objects in JavaScript",
+                     "1.) JavaScript oject literal: The syntax of creating object using object literal is given below:",
+                     "object={property1:value1,property2:value2.....propertyN:valueN}",
+                     "2.) By creating instance of Object- The syntax of creating object directly is given below:",
+                     "var objectname=new Object();  ",
+                     "3.) By using an object constructor",
+                     "<script>",
+                     "function emp(id,name,salary){",
+                     "this.id=id;",
+                     "this.name=name;",
+                     "this.salary=salary;",
+                     "}",
+                     "e=new emp(103,Vimal Jaiswal,30000);",
+                     "document.write(e.id+ +e.name+ +e.salary);",
+                     "</script>",
+                     "JavaScript Array- JavaScript array is an object that represents a collection of similar type of elements."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:35",
+            "isDone": true
+         },
+         {
+            "title": "Declare JavaScript Variables",
+            "subTopicList": [
+               {
+                  "subTopic": "Debugging ",
+                  "subTopicContent": [
+                     "In computer science, data is anything that is meaningful to the computer. JavaScript provides eight different data types which are undefined, null, boolean, string, symbol, bigint, number, and object. For example, computers distinguish between numbers, such as the number 12, and strings, such as 12, dog, or 123 cats, which are collections of characters. Computers can perform mathematical operations on a number, but not on a string.",
+                     "Variables allow computers to store and manipulate data in a dynamic fashion. They do this by using a label to point to the data rather than using the data itself. Any of the eight data types may be stored in a variable. Variables are similar to the x and y variables you use in mathematics, which means they're a simple name to represent the data we want to refer to. Computer variables differ from mathematical variables in that they can store different values at different times.",
+                     "We tell JavaScript to create or declare a variable by putting the keyword var in front of it, like so:",
+                     "var ourName;",
+                     "creates a variable called ourName. In JavaScript we end statements with semicolons. Variable names can be made up of numbers, letters, and $ or _, but may not contain spaces or start with a number.",
+                     "Use the var keyword to create a variable called myName."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:35",
+            "isDone": true
+         },
+         {
+            "title": "",
+            "subTopicList": [
+               {
+                  "subTopic": "Precedence of Operators in C#",
+                  "subTopicContent": [
+                     "The precedence of operator specifies that which operator will be evaluated first and next. The associativity specifies the operators direction to be evaluated, it may be left to right or right to left.",
+                     "Unary, Additive-  + - ! ~ ++ -- (type)* & size of",
+                     "Multiplicative- + -",
+                     "Relational- & / *",
+                     "Shift- < < > >",
+                     "Equality- == !=",
+                     "Logical AND- &",
+                     "Logical OR- |",
+                     "Logical XOR- ^",
+                     "Conditonal OR- ||",
+                     "Conditional AND- &&",
+                     "Null Coalescing- ??",
+                     "Ternary- ?:",
+                     "Assignmnent- = *= /= %= += -= <<=>> = & ^ = |= =>"
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:35",
+            "isDone": true
+         },
+         {
+            "title": "Storing & Assigning Values",
+            "subTopicList": [
+               {
+                  "subTopic": "Storing Values with the Assignment Operator & Assigning the Value of One Variable to Another",
+                  "subTopicContent": [
+                     "In JavaScript, you can store a value in a variable with the assignment operator (=).",
+                     "yVariable = 5;",
+                     "If there are any calculations to the right of the = operator, those are performed before the value is assigned to the variable on the left of the operator.",
+                     "var myVar;",
+                     "myVar = 5;",
+                     "First, this code creates a variable named myVar. Then, the code assigns 5 to myVar. Now, if myVar appears again in the code, the program will treat it as if it is 5.",
+                     "var myVar;",
+                     "myVar = 5;",
+                     "var myNum;",
+                     "myNum = myVar;",
+                     "The above declares a myVar variable with no value, then assigns it the value 5. Next, a variable named myNum is declared with no value. Then, the contents of myVar (which is 5) is assigned to the variable myNum. Now, myNum also has the value of 5."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:35",
+            "isDone": true
+         },
+         {
+            "title": "Debugging",
+            "subTopicList": [
+               {
+                  "subTopic": "Debugging ",
+                  "subTopicContent": [
+                     "Debugging is the process of going through your code, finding any issues, and fixing them. Issues in code generally come in three forms: syntax errors that prevent your program from running, runtime errors where your code has unexpected behavior, or logical errors where your code doesn't do what you intended. In this course, you'll learn how to use the JavaScript console to debug programs and prevent common issues before they happen."
+                  ]
+               }
+            ],
+            "type": "Readings",
+            "duration": "5:35",
+            "isDone": true
+         },
+         {
+            "title": "Understanding Variables",
+            "subTopicList": [
+               {
+                  "subTopic": "Understanding Uninitialized Variables & Case Sensitivity in Variables",
+                  "subTopicContent": [
+                     "When JavaScript variables are declared, they have an initial value of undefined. If you do a mathematical operation on an undefined variable your result will be NaN which means Not a Number. If you concatenate a string with an undefined variable, you will get a string of undefined.",
+                     "Initialize the three variables a, b, and c with 5, 10, and I am a respectively so that they will not be undefined.",
+                     "In JavaScript all variables and function names are case sensitive. This means that capitalization matters.",
+                     "MYVAR is not the same as MyVar nor myvar. It is possible to have multiple distinct variables with the same name but different casing. It is strongly recommended that for the sake of clarity, you do not use this language feature."
                   ]
                }
             ],
