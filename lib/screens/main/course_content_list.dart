@@ -1,6 +1,7 @@
 import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:learning_app/constants/colors.dart';
+import 'package:learning_app/screens/main/lesson_content.dart';
 import 'package:learning_app/widgets/app_bar.dart';
 
 class CourseContentList extends StatefulWidget {
@@ -57,29 +58,32 @@ class _CourseContentListState extends State<CourseContentList> {
             margin: const EdgeInsets.only(bottom: 10.0),
             child: TextButton(
               onPressed: () {
-                showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return AlertDialog(
-                      title: const Text(
-                        'Error!',
-                        style: TextStyle(color: error),
-                      ),
-                      content: const Text(
-                        'Please Enroll First!',
-                        style: TextStyle(color: error),
-                      ),
-                      actions: [
-                        TextButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          child: const Text('OK'),
-                        ),
-                      ],
-                    );
-                  },
-                );
+                // showDialog(
+                //   context: context,
+                //   builder: (BuildContext context) {
+                //     return AlertDialog(
+                //       title: const Text(
+                //         'Error!',
+                //         style: TextStyle(color: error),
+                //       ),
+                //       content: const Text(
+                //         'Please Enroll First!',
+                //         style: TextStyle(color: error),
+                //       ),
+                //       actions: [
+                //         TextButton(
+                //           onPressed: () {
+                //             Navigator.pop(context);
+                //           },
+                //           child: const Text('OK'),
+                //         ),
+                //       ],
+                //     );
+                //   },
+                // );
+
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const LessonContent()));
               },
               style: TextButton.styleFrom(
                   foregroundColor: Colors.transparent,
