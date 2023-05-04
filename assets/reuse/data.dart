@@ -1,5 +1,3 @@
-import 'package:learning_app/screens/main/course_content_list.dart';
-
 class Course {
   int id;
   String title;
@@ -13,7 +11,7 @@ class Course {
     required this.id,
     required this.title,
     required this.category,
-    required this. description,
+    required this.description,
     required this.author,
     required this.authorImage,
     required this.courseImage,

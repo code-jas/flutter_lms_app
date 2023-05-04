@@ -18,16 +18,21 @@ class ExploreCourse extends StatefulWidget {
 }
 
 class _ExploreCourseState extends State<ExploreCourse> {
-  // add list tags that inline in Information Technology maximum 10
-
   List<Course> courses = [];
 
   void loadCoursesFromJson() async {
     String jsonData = await rootBundle.loadString('json/data.json');
     List<dynamic> coursesJson = jsonDecode(jsonData);
-    courses =
-        coursesJson.map((courseJson) => Course.fromJson(courseJson)).toList();
-    print(courses);
+    setState(() {
+      courses =
+          coursesJson.map((courseJson) => Course.fromJson(courseJson)).toList();
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    loadCoursesFromJson();
   }
 
   @override
@@ -76,7 +81,7 @@ class _ExploreCourseState extends State<ExploreCourse> {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Row(
-                    children:  [
+                    children: [
                       const Expanded(
                         child: TextField(
                           decoration: InputDecoration(
@@ -94,21 +99,20 @@ class _ExploreCourseState extends State<ExploreCourse> {
                       const SizedBox(width: 10),
                       // add icon search here with size 20 and with onpress
                       GestureDetector(
-                        child : const Icon(
-                          FeatherIcons.search,
-                          color: light_100,
-                          size: 20,
-                        ),
-                        onTap: () {
+                          child: const Icon(
+                            FeatherIcons.search,
+                            color: light_100,
+                            size: 20,
+                          ),
+                          onTap: () {
                             Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const SearchResult(),
-                            ),
-                          );
-                        } //navigate to search screen
-                      ),
-   
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const SearchResult(),
+                              ),
+                            );
+                          } //navigate to search screen
+                          ),
                     ],
                   ),
                 ),

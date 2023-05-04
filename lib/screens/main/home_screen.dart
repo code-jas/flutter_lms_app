@@ -34,7 +34,6 @@ class _HomeScreenState extends State<HomeScreen> {
       courses =
           coursesJson.map((courseJson) => Course.fromJson(courseJson)).toList();
     });
-    print(courses);
   }
 
   @override

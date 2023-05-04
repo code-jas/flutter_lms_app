@@ -5,6 +5,7 @@ import 'package:learning_app/models/course.dart';
 import 'package:learning_app/screens/main/lesson_content.dart';
 import 'package:learning_app/widgets/app_bar.dart';
 
+// ignore: must_be_immutable
 class CourseContentList extends StatefulWidget {
   String title;
   List<CourseContent> contents;

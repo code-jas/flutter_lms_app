@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:learning_app/constants/colors.dart';
 import 'package:learning_app/widgets/login/button.dart';
-import 'package:learning_app/widgets/login/square_tile.dart';
 import 'package:learning_app/widgets/login/text_field.dart';
 
 class RegisterPage extends StatefulWidget {

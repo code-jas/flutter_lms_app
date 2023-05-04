@@ -20,7 +20,7 @@ class _TagDetailState extends State<TagDetail> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,7 +28,7 @@ class _TagDetailState extends State<TagDetail> {
           Wrap(
             spacing: 10,
             children: widget.tags
-                .sublist(0, 4)
+                .sublist(0, 3)
                 .map((e) => Container(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 15, vertical: 10),

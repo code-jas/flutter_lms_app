@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:learning_app/constants/colors.dart';
 
 class LoginTextField extends StatelessWidget {
+  // ignore: prefer_typing_uninitialized_variables
   final controller;
   final String hintText;
   final bool obscureText;
