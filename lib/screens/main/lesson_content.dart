@@ -36,7 +36,6 @@ class _LessonContentState extends State<LessonContent> {
                   ),
                 ),
                 // create a list view
-
                 child: Column(children: [
                   const Expanded(
                     child: ContentMaterial(),

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:learning_app/constants/colors.dart';
-import 'package:feather_icons/feather_icons.dart';
 import 'package:learning_app/widgets/course_card.dart';
 
 class ListViewCards extends StatefulWidget {
@@ -26,9 +24,6 @@ class _ListViewCardsState extends State<ListViewCards> {
           },
         ),
       )
-
-    )
-    
-;
+    );
   }
 }
