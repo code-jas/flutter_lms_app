@@ -13,7 +13,7 @@ class Course {
     required this.id,
     required this.title,
     required this.category,
-    required this.description,
+    required this. description,
     required this.author,
     required this.authorImage,
     required this.courseImage,
