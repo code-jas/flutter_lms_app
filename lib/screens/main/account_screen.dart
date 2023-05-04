@@ -106,7 +106,7 @@ class _AccountState extends State<Account> {
                         TextStyle(color: light_100, fontSize: 14, height: 0.5),
                   ),
                   trailing: const Icon(
-                    Icons.arrow_forward_ios,
+                    FeatherIcons.chevronRight,
                     color: light_100,
                   ),
                   onTap: () {

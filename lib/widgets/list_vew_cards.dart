@@ -1,10 +1,13 @@
+// import 'dart:convert';
+
 import 'package:flutter/material.dart';
-import 'package:learning_app/constants/colors.dart';
-import 'package:feather_icons/feather_icons.dart';
+// import 'package:flutter/services.dart';
+import 'package:learning_app/models/course.dart';
 import 'package:learning_app/widgets/course_card.dart';
 
 class ListViewCards extends StatefulWidget {
-  const ListViewCards({super.key});
+  final List<Course> coursesList;
+  const ListViewCards({super.key, required this.coursesList});
 
   @override
   State<ListViewCards> createState() => _ListViewCardsState();
@@ -20,15 +23,22 @@ class _ListViewCardsState extends State<ListViewCards> {
         removeTop: true,
         child: ListView.builder(
           scrollDirection: Axis.vertical,
-          itemCount: 6, // Replace this with the actual number of items you have
+          itemCount: widget.coursesList.length,
           itemBuilder: (BuildContext context, int index) {
-            return const CourseCard();
+            Course course = widget.coursesList[index];
+            return CourseCard(
+              title: course.title,
+              category: course.category,
+              shortDescription: course.shortDescription,
+              ratings: course.ratings,
+              description: course.description,
+              author: course.author,
+              contents: course.contents,
+              authorImage: course.authorImage,
+            );
           },
         ),
-      )
-
-    )
-    
-;
+      ),
+    );
   }
 }

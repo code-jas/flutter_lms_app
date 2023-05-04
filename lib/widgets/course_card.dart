@@ -1,10 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:learning_app/constants/colors.dart';
 import 'package:feather_icons/feather_icons.dart';
+import 'package:learning_app/models/course.dart';
 import 'package:learning_app/screens/main/course_detail.dart';
 
 class CourseCard extends StatefulWidget {
-  const CourseCard({super.key});
+  final String title;
+  final String author;
+  final String authorImage;
+  final String shortDescription;
+  final String ratings;
+  final List<String> category;
+  final List<String> description;
+  final List<CourseContent> contents;
+
+  const CourseCard({
+    super.key,
+    required this.title,
+    required this.category,
+    required this.author,
+    required this.authorImage,
+    required this.ratings,
+    required this.shortDescription,
+    required this.description,
+    required this.contents,
+  });
 
   @override
   State<CourseCard> createState() => _CourseCardState();
@@ -18,7 +38,13 @@ class _CourseCardState extends State<CourseCard> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const CourseDetail(),
+            builder: (context) => CourseDetail(
+                title: widget.title,
+                category: widget.category,
+                description: widget.description,
+                author: widget.author,
+                authorImage: widget.authorImage,
+                contents: widget.contents),
           ),
         );
       },
@@ -40,9 +66,9 @@ class _CourseCardState extends State<CourseCard> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text(
-                            'Declarative interfaces for any Apple Devices any Apple Device',
-                            style: TextStyle(
+                          Text(
+                            widget.title,
+                            style: const TextStyle(
                               color: light_200,
                               fontFamily: 'DMSans',
                               fontSize: 12,
@@ -50,9 +76,9 @@ class _CourseCardState extends State<CourseCard> {
                             ),
                           ),
                           const SizedBox(height: 5),
-                          const Text(
-                            'Course Description',
-                            style: TextStyle(
+                          Text(
+                            widget.shortDescription,
+                            style: const TextStyle(
                               color: light_200,
                               fontFamily: 'DMSans',
                               fontSize: 12,
@@ -61,27 +87,27 @@ class _CourseCardState extends State<CourseCard> {
                           ),
                           const SizedBox(height: 10),
                           Row(
-                            children: const [
+                            children: [
                               // add icon star with filled color
-                              Icon(
+                              const Icon(
                                 FeatherIcons.star,
                                 color: primary,
                                 size: 12,
                               ),
 
-                              SizedBox(width: 5),
+                              const SizedBox(width: 5),
                               Text(
-                                '4.5',
-                                style: TextStyle(
+                                widget.ratings,
+                                style: const TextStyle(
                                   color: light_200,
                                   fontFamily: 'DMSans',
                                   fontSize: 12,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              SizedBox(width: 5),
+                              const SizedBox(width: 5),
                               // add separator
-                              Text(
+                              const Text(
                                 '·',
                                 style: TextStyle(
                                   color: light_200,
@@ -90,10 +116,10 @@ class _CourseCardState extends State<CourseCard> {
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              SizedBox(width: 5),
+                              const SizedBox(width: 5),
                               Text(
-                                'By John Doe',
-                                style: TextStyle(
+                                'By $widget.author',
+                                style: const TextStyle(
                                   color: dark_300,
                                   fontFamily: 'DMSans',
                                   fontSize: 14,

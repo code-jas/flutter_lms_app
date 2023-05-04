@@ -1,12 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:learning_app/constants/colors.dart';
-import 'package:feather_icons/feather_icons.dart';
+import 'package:learning_app/models/course.dart';
 import 'package:learning_app/screens/main/course_content_list.dart';
 import 'package:learning_app/widgets/app_bar.dart';
 import 'package:learning_app/widgets/courses/tag_detail.dart';
 
 class CourseDetail extends StatefulWidget {
-  const CourseDetail({super.key});
+  final String title;
+  final String author;
+  final String authorImage;
+  final List<String> category;
+  final List<String> description;
+  final List<CourseContent> contents;
+
+  const CourseDetail({
+    super.key,
+    required this.title,
+    required this.author,
+    required this.authorImage,
+    required this.category,
+    required this.description,
+    required this.contents,
+  });
 
   @override
   State<CourseDetail> createState() => _CourseDetailState();
@@ -65,17 +80,20 @@ class _CourseDetailState extends State<CourseDetail> {
               ],
             ),
             const SizedBox(height: 33),
-            const Text(
-              'Declarative interfaces for any Apple Devices',
-              softWrap: true,
-              style: TextStyle(
-                color: light_100,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                widget.title,
+                softWrap: true,
+                style: const TextStyle(
+                  color: light_100,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             const SizedBox(height: 17),
-            const TagDetail(),
+            TagDetail(tags: widget.category),
           ],
         ),
       ),
@@ -108,34 +126,67 @@ class _CourseDetailState extends State<CourseDetail> {
                   style: TextStyle(color: light_100, fontSize: 12, height: 1),
                 ),
                 const SizedBox(height: 20),
-                const Text(
-                  'Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet. Vel quam elementum pulvinar etiamnim lobortis scelerisque. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur....',
+                Text(
+                  widget.description[0],
                   softWrap: true,
-                  style: TextStyle(color: light_100, fontSize: 14, height: 1.5),
+                  style: const TextStyle(
+                      color: light_100, fontSize: 14, height: 1.5),
                 ),
-                if (_showMore)
-                  // Additional content to show when button is pressed
-                  const Text(
-                    'Suspendisse potenti. Donec euismod massa vel lobortis imperdiet. Nullam auctor elit in elit lobortis, eu rhoncus arcu interdum. Sed quis erat sed nunc rhoncus eleifend.',
-                    softWrap: true,
-                    style:
-                        TextStyle(color: light_100, fontSize: 14, height: 1.5),
-                  ),
                 const SizedBox(height: 15),
-                GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      _showMore = !_showMore;
-                    });
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 8.0),
-                    child: Text(
-                      _showMore ? 'Show less' : 'Show more',
-                      style: const TextStyle(color: primary, fontSize: 12),
+                if (!_showMore)
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        _showMore = true;
+                      });
+                    },
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 8.0),
+                      child: Text(
+                        'Show more',
+                        style: TextStyle(color: primary, fontSize: 12),
+                      ),
                     ),
                   ),
-                ),
+                if (_showMore)
+                  ListView.builder(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemCount: widget.description.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      if (index == 0) {
+                        // Skip the first paragraph, which is already displayed above
+                        return const SizedBox.shrink();
+                      } else {
+                        return Column(
+                          children: [
+                            Text(
+                              widget.description[index],
+                              softWrap: true,
+                              style: const TextStyle(
+                                  color: light_100, fontSize: 14, height: 1.5),
+                            ),
+                            const SizedBox(height: 15),
+                          ],
+                        );
+                      }
+                    },
+                  ),
+                if (_showMore)
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        _showMore = false;
+                      });
+                    },
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 8.0),
+                      child: Text(
+                        'Show less',
+                        style: TextStyle(color: primary, fontSize: 12),
+                      ),
+                    ),
+                  ),
                 const Divider(
                   height: 35,
                   thickness: 2,
@@ -159,7 +210,9 @@ class _CourseDetailState extends State<CourseDetail> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const CourseContentList(),
+                              builder: (context) => const CourseContentList(
+                                title: 'Course Content',
+                              ),
                             ),
                           );
                         },
@@ -187,12 +240,12 @@ class _CourseDetailState extends State<CourseDetail> {
                     Expanded(
                       child: GestureDetector(
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const CourseDetail(),
-                            ),
-                          );
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(
+                          //     builder: (context) => const CourseDetail(),
+                          //   ),
+                          // );
                         },
                         child: Container(
                           height: 50,
@@ -224,6 +277,14 @@ class _CourseDetailState extends State<CourseDetail> {
   }
 
   _authorCard() {
+    bool _showMore = false;
+
+    int _totalWords(List<String> textList) {
+      return textList
+          .map((text) => text.split(' ').length)
+          .reduce((a, b) => a + b);
+    }
+
     return Container(
       width: MediaQuery.of(context).size.width,
       padding: const EdgeInsets.all(15),
@@ -238,11 +299,11 @@ class _CourseDetailState extends State<CourseDetail> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(
+                SizedBox(
                   height: 44,
                   width: 44,
                   child: CircleAvatar(
-                    backgroundImage: AssetImage("assets/images/angelo1.jpg"),
+                    backgroundImage: AssetImage(widget.authorImage),
                   ),
                   // add background image here
                 ),
@@ -251,9 +312,9 @@ class _CourseDetailState extends State<CourseDetail> {
                     child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      'John Angelo B Silvestre',
-                      style: TextStyle(
+                    Text(
+                      widget.author,
+                      style: const TextStyle(
                         color: light_100,
                         fontFamily: 'DMSans',
                         fontSize: 14,

@@ -1,6 +1,10 @@
+import 'dart:convert';
+
 import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:learning_app/constants/colors.dart';
+import 'package:learning_app/models/course.dart';
 import 'package:learning_app/widgets/app_bar.dart';
 import 'package:learning_app/widgets/list_vew_cards.dart';
 import 'package:learning_app/widgets/explore_course/tag_category.dart';
@@ -14,6 +18,16 @@ class ExploreCourse extends StatefulWidget {
 
 class _ExploreCourseState extends State<ExploreCourse> {
   // add list tags that inline in Information Technology maximum 10
+
+  List<Course> courses = [];
+
+  void loadCoursesFromJson() async {
+    String jsonData = await rootBundle.loadString('json/data.json');
+    List<dynamic> coursesJson = jsonDecode(jsonData);
+    courses =
+        coursesJson.map((courseJson) => Course.fromJson(courseJson)).toList();
+    print(courses);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -104,8 +118,8 @@ class _ExploreCourseState extends State<ExploreCourse> {
                             ),
                           )),
                       const SizedBox(height: 10),
-                      const Expanded(
-                        child: ListViewCards(),
+                      Expanded(
+                        child: ListViewCards(coursesList: courses),
                       ),
                     ],
                   ),

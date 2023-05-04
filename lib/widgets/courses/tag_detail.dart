@@ -2,20 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:learning_app/constants/colors.dart';
 
 class TagDetail extends StatefulWidget {
-  const TagDetail({super.key});
+  final List<String> tags;
+  const TagDetail({super.key, required this.tags});
 
   @override
   State<TagDetail> createState() => _TagDetailState();
 }
 
 class _TagDetailState extends State<TagDetail> {
-  List<String> tags = [
-    'Swift Ui',
-    'Flutter',
-    'Figma',
-    'Vue',
-    'Software Development',
-  ];
+  // List<String> tags = [
+  //   'Swift Ui',
+  //   'Flutter',
+  //   'Figma',
+  //   'Vue',
+  //   'Software Development',
+  // ];
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class _TagDetailState extends State<TagDetail> {
         children: [
           Wrap(
             spacing: 10,
-            children: tags
+            children: widget.tags
                 .sublist(0, 4)
                 .map((e) => Container(
                       padding: const EdgeInsets.symmetric(

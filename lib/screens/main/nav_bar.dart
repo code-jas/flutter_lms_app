@@ -117,11 +117,11 @@ class _DashboardState extends State<Dashboard> {
                 case 0:
                   // only scroll to top when current index is selected.
                   if (_selectedIndex == index) {
-                    _homeController.animateTo(
-                      0.0,
-                      duration: const Duration(milliseconds: 500),
-                      curve: Curves.easeOut,
-                    );
+                    // _homeController.animateTo(
+                    //   0.0,
+                    //   duration: const Duration(milliseconds: 500),
+                    //   curve: Curves.easeOut,
+                    // );
                   }
                   break;
               }

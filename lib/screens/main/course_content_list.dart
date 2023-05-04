@@ -4,7 +4,7 @@ import 'package:learning_app/constants/colors.dart';
 import 'package:learning_app/widgets/app_bar.dart';
 
 class CourseContentList extends StatefulWidget {
-  const CourseContentList({super.key});
+  const CourseContentList({super.key, required String title});
 
   @override
   State<CourseContentList> createState() => _CourseContentListState();
