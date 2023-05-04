@@ -8,6 +8,7 @@ import 'package:learning_app/models/course.dart';
 import 'package:learning_app/widgets/app_bar.dart';
 import 'package:learning_app/widgets/list_vew_cards.dart';
 import 'package:learning_app/widgets/explore_course/tag_category.dart';
+import 'package:learning_app/screens/main/search_result.dart';
 
 class ExploreCourse extends StatefulWidget {
   const ExploreCourse({Key? key}) : super(key: key);
@@ -75,8 +76,8 @@ class _ExploreCourseState extends State<ExploreCourse> {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Row(
-                    children: const [
-                      Expanded(
+                    children:  [
+                      const Expanded(
                         child: TextField(
                           decoration: InputDecoration(
                             hintText: 'Search',
@@ -90,11 +91,24 @@ class _ExploreCourseState extends State<ExploreCourse> {
                           ),
                         ),
                       ),
-                      SizedBox(width: 10),
-                      Icon(
-                        Icons.search,
-                        color: light_100,
+                      const SizedBox(width: 10),
+                      // add icon search here with size 20 and with onpress
+                      GestureDetector(
+                        child : const Icon(
+                          FeatherIcons.search,
+                          color: light_100,
+                          size: 20,
+                        ),
+                        onTap: () {
+                            Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const SearchResult(),
+                            ),
+                          );
+                        } //navigate to search screen
                       ),
+   
                     ],
                   ),
                 ),

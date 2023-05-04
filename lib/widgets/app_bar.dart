@@ -38,6 +38,7 @@ class _AppBarWState extends State<AppBarWidget> {
           left: 25.0,
         ),
         onPressed: () {
+          // back to previous screen
           Navigator.pop(context);
         },
       ),

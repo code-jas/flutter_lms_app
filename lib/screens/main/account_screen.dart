@@ -51,7 +51,7 @@ class _AccountState extends State<Account> {
             height: 120,
             width: 120,
             child: CircleAvatar(
-              backgroundImage: AssetImage("assets/images/lappay_prof2.jpg"),
+              backgroundImage: AssetImage("assets/images/lappay_prof1.png"),
             ),
           ),
           SizedBox(height: 30),

@@ -1,6 +1,7 @@
 import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:learning_app/constants/colors.dart';
+import 'package:learning_app/screens/main/lesson_content.dart';
 import 'package:learning_app/widgets/app_bar.dart';
 
 class CourseContentList extends StatefulWidget {
@@ -80,6 +81,9 @@ class _CourseContentListState extends State<CourseContentList> {
                     );
                   },
                 );
+
+                // Navigator.push(context,
+                //     MaterialPageRoute(builder: (context) => const LessonContent()));
               },
               style: TextButton.styleFrom(
                   foregroundColor: Colors.transparent,
