@@ -18,7 +18,7 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   int lastIndex = 0;
   int _selectedIndex = 0;
-  final ScrollController _homeController = ScrollController();
+  // final ScrollController _homeController = ScrollController();
 
   late List<Widget> tabs;
 

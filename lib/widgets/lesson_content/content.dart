@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:learning_app/constants/colors.dart';
-import 'package:feather_icons/feather_icons.dart';
 import 'package:learning_app/models/course.dart';
 
+// ignore: must_be_immutable
 class ContentMaterial extends StatefulWidget {
   List<CourseSubTopic> topicList;
   ContentMaterial({super.key, required this.topicList});

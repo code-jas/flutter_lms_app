@@ -278,14 +278,6 @@ class _CourseDetailState extends State<CourseDetail> {
   }
 
   _authorCard() {
-    bool _showMore = false;
-
-    int _totalWords(List<String> textList) {
-      return textList
-          .map((text) => text.split(' ').length)
-          .reduce((a, b) => a + b);
-    }
-
     return Container(
       width: MediaQuery.of(context).size.width,
       padding: const EdgeInsets.all(15),

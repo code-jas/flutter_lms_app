@@ -1,6 +1,10 @@
+import 'dart:convert';
+
 import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:learning_app/constants/colors.dart';
+import 'package:learning_app/models/course.dart';
 import 'package:learning_app/widgets/app_bar.dart';
 import 'package:learning_app/widgets/my_course/done.dart';
 import 'package:learning_app/widgets/my_course/in_progress.dart';
@@ -16,6 +20,22 @@ class MyCourse extends StatefulWidget {
 }
 
 class _MyCourseState extends State<MyCourse> {
+  List<Course> courses = [];
+  void loadCoursesFromJson() async {
+    String jsonData = await rootBundle.loadString('json/data.json');
+    List<dynamic> coursesJson = jsonDecode(jsonData);
+    setState(() {
+      courses =
+          coursesJson.map((courseJson) => Course.fromJson(courseJson)).toList();
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    loadCoursesFromJson();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,11 +109,11 @@ class _MyCourseState extends State<MyCourse> {
                     ),
                   ),
                 ),
-                const Expanded(
+                Expanded(
                   child: TabBarView(
                     children: [
-                      InProgress(),
-                      Done(),
+                      InProgress(coursesList: courses),
+                      Done(coursesList: courses),
                     ],
                   ),
                 )

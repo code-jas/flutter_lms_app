@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:learning_app/constants/colors.dart';
-import 'package:feather_icons/feather_icons.dart';
 import 'package:learning_app/models/course.dart';
 import 'package:learning_app/widgets/app_bar.dart';
 import 'package:learning_app/widgets/lesson_content/content.dart';
 
+// ignore: must_be_immutable
 class LessonContent extends StatefulWidget {
   final String topicTitle;
   List<CourseSubTopic> topicList;
