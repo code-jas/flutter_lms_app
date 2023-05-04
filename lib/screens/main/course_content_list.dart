@@ -1,11 +1,14 @@
 import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:learning_app/constants/colors.dart';
+import 'package:learning_app/models/course.dart';
 import 'package:learning_app/screens/main/lesson_content.dart';
 import 'package:learning_app/widgets/app_bar.dart';
 
 class CourseContentList extends StatefulWidget {
-  const CourseContentList({super.key, required String title});
+  String title;
+  List<CourseContent> contents;
+  CourseContentList({super.key, required this.title, required this.contents});
 
   @override
   State<CourseContentList> createState() => _CourseContentListState();
@@ -26,15 +29,15 @@ class _CourseContentListState extends State<CourseContentList> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: default_,
-      appBar: const AppBarWidget(
-        title: "Declarative interface for any Apple Devices",
+      appBar: AppBarWidget(
+        title: widget.title,
         paddingController: 9,
-        actions: [],
+        actions: const [],
       ),
       body: SafeArea(
         child: Stack(
           children: [
-            _topicList(items),
+            _topicList(),
             _joinButton(),
           ],
         ),
@@ -42,14 +45,15 @@ class _CourseContentListState extends State<CourseContentList> {
     );
   }
 
-  _topicList(List<String> items) {
+  _topicList() {
     return Container(
       width: MediaQuery.of(context).size.width,
       padding: const EdgeInsets.all(16.0),
       child: ListView.builder(
-        itemCount: 8,
+        itemCount: widget.contents.length,
         itemBuilder: (BuildContext context, int index) {
-          String item = items[index];
+          CourseContent content = widget.contents[index];
+
           return Container(
             decoration: BoxDecoration(
               color: dark_200,
@@ -58,89 +62,77 @@ class _CourseContentListState extends State<CourseContentList> {
             margin: const EdgeInsets.only(bottom: 10.0),
             child: TextButton(
               onPressed: () {
-                showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return AlertDialog(
-                      title: const Text(
-                        'Error!',
-                        style: TextStyle(color: error),
-                      ),
-                      content: const Text(
-                        'Please Enroll First!',
-                        style: TextStyle(color: error),
-                      ),
-                      actions: [
-                        TextButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          child: const Text('OK'),
-                        ),
-                      ],
-                    );
-                  },
+                // Your button onPressed code here
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LessonContent(
+                      topicTitle: content.title,
+                      topicList: content.subTopicList,
+                    ),
+                  ),
                 );
-
-                // Navigator.push(context,
-                //     MaterialPageRoute(builder: (context) => const LessonContent()));
               },
               style: TextButton.styleFrom(
-                  foregroundColor: Colors.transparent,
-                  shadowColor: Colors.transparent,
-                  backgroundColor: Colors.transparent,
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 8.0, horizontal: 25),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15))),
+                foregroundColor: Colors.transparent,
+                shadowColor: Colors.transparent,
+                backgroundColor: Colors.transparent,
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8.0, horizontal: 25),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15)),
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Expanded(
-                      child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        item,
-                        style: const TextStyle(
-                          color: light_100,
-                          fontFamily: 'DMSans',
-                          fontSize: 14,
-                          fontWeight: FontWeight.normal,
-                        ),
-                      ),
-                      Row(children: const [
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
                         Text(
-                          'Readings',
-                          style: TextStyle(
-                            color: light_300,
+                          content.title, // Display the title property here
+                          style: const TextStyle(
+                            color: light_100,
                             fontFamily: 'DMSans',
-                            fontSize: 12,
+                            fontSize: 14,
+                            fontWeight: FontWeight.normal,
                           ),
                         ),
-                        SizedBox(width: 10),
-                        // add separator
-                        Text(
-                          '·',
-                          style: TextStyle(
-                            color: light_300,
-                            fontFamily: 'DMSans',
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        Row(
+                          children: [
+                            Text(
+                              content.type,
+                              style: const TextStyle(
+                                color: light_300,
+                                fontFamily: 'DMSans',
+                                fontSize: 12,
+                              ),
+                            ),
+                            const SizedBox(width: 10),
+                            // add separator
+                            const Text(
+                              '·',
+                              style: TextStyle(
+                                color: light_300,
+                                fontFamily: 'DMSans',
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            const SizedBox(width: 10),
+                            Text(
+                              content.duration,
+                              style: const TextStyle(
+                                color: light_300,
+                                fontFamily: 'DMSans',
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
                         ),
-                        SizedBox(width: 10),
-                        Text(
-                          '10 mins',
-                          style: TextStyle(
-                            color: light_300,
-                            fontFamily: 'DMSans',
-                            fontSize: 12,
-                          ),
-                        ),
-                      ]),
-                    ],
-                  )),
+                      ],
+                    ),
+                  ),
                   const SizedBox(width: 16.0),
                   const Icon(FeatherIcons.chevronRight,
                       color: light_100, size: 25.0),

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:learning_app/constants/colors.dart';
 import 'package:feather_icons/feather_icons.dart';
+import 'package:learning_app/models/course.dart';
 
 class ContentMaterial extends StatefulWidget {
-  const ContentMaterial({super.key});
+  List<CourseSubTopic> topicList;
+  ContentMaterial({super.key, required this.topicList});
 
   @override
   State<ContentMaterial> createState() => _ContentMaterialState();
@@ -12,49 +14,58 @@ class ContentMaterial extends StatefulWidget {
 class _ContentMaterialState extends State<ContentMaterial> {
   @override
   Widget build(BuildContext context) {
-    return  ListView.builder(
-                  scrollDirection: Axis.vertical,
-                  shrinkWrap: true,
-                  
-                  itemCount: 5,
-                  itemBuilder: (BuildContext context, int index) {
-                    return Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          width: MediaQuery.of(context).size.width,
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 30, vertical: 20),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          child: const Text(
-                            "Introduction to Flutter",
-                            style: TextStyle(
-                              color: light_100,
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: MediaQuery.of(context).size.width,
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 30, vertical: 20),
-                          decoration: const BoxDecoration(
-                             
-                              color: dark_200),
-                          child: const Text(
-                            "JavaScript is a scripting language you can use to make web pages interactive. It is one of the core technologies of the web, along with HTML and CSS, and is supported by all modern browsers. In this course, you'll learn fundamental programming concepts in JavaScript. You'll start with basic data structures like numbers and strings. Then you'll learn to work with arrays, objects, functions, loops, if/else statements, and more.",
-                            style: TextStyle(
-                              color: light_100,
-                              fontSize: 14,
-                            ),
-                          ),
-                        )
-                      ],
-                    );
-                  },
-                );
+    return SingleChildScrollView(
+      child: ListView.builder(
+        physics: const NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
+        itemCount: widget.topicList.length,
+        itemBuilder: (BuildContext context, int index) {
+          CourseSubTopic topic = widget.topicList[index];
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                width: MediaQuery.of(context).size.width,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                child: Text(
+                  topic.subTopic,
+                  style: const TextStyle(
+                    color: light_100,
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              ListView.builder(
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: topic.subTopicContent.length,
+                itemBuilder: (BuildContext context, int index) {
+                  String content = topic.subTopicContent[index];
+                  return Container(
+                    width: MediaQuery.of(context).size.width,
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 30, vertical: 10),
+                    decoration: const BoxDecoration(color: dark_200),
+                    child: Text(
+                      content,
+                      style: const TextStyle(
+                        color: light_100,
+                        fontSize: 14,
+                        height: 1.5,
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ],
+          );
+        },
+      ),
+    );
   }
 }

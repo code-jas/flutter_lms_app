@@ -210,8 +210,9 @@ class _CourseDetailState extends State<CourseDetail> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const CourseContentList(
-                                title: 'Course Content',
+                              builder: (context) => CourseContentList(
+                                title: widget.title,
+                                contents: widget.contents,
                               ),
                             ),
                           );
