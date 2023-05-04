@@ -6,7 +6,10 @@ import 'package:learning_app/widgets/my_course/done.dart';
 import 'package:learning_app/widgets/my_course/in_progress.dart';
 
 class MyCourse extends StatefulWidget {
-  const MyCourse({super.key});
+  final ValueChanged<int> onDataChanged;
+  final int lastIndex;
+
+  const MyCourse({super.key, required this.onDataChanged, required this.lastIndex});
 
   @override
   State<MyCourse> createState() => _MyCourseState();

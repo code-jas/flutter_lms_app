@@ -16,10 +16,17 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
+  int lastIndex = 0;
   int _selectedIndex = 0;
   final ScrollController _homeController = ScrollController();
 
   late List<Widget> tabs;
+
+  void _updateData(int data) {
+    setState(() {
+      lastIndex = data;
+    });
+  }
 
   @override
   void initState() {
@@ -27,9 +34,9 @@ class _DashboardState extends State<Dashboard> {
 
     tabs = [
       HomeScreen(),
-      const ExploreCourse(),
-      const MyCourse(),
-      const Account(),
+      ExploreCourse(onDataChanged: _updateData, lastIndex: lastIndex),
+      MyCourse(onDataChanged: _updateData, lastIndex: lastIndex),
+      Account(onDataChanged: _updateData, lastIndex: lastIndex),
     ];
   }
 

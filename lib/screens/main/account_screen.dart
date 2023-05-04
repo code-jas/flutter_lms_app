@@ -6,7 +6,9 @@ import 'package:learning_app/widgets/app_bar.dart';
 import 'package:learning_app/widgets/login/button_signout.dart';
 
 class Account extends StatefulWidget {
-  const Account({super.key});
+  final ValueChanged<int> onDataChanged;
+  final int lastIndex;
+  const Account({super.key, required this.onDataChanged, required this.lastIndex});
 
   @override
   State<Account> createState() => _AccountState();

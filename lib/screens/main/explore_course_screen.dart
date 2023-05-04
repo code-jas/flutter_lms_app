@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:ffi';
 
 import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +12,11 @@ import 'package:learning_app/widgets/explore_course/tag_category.dart';
 import 'package:learning_app/screens/main/search_result.dart';
 
 class ExploreCourse extends StatefulWidget {
-  const ExploreCourse({Key? key}) : super(key: key);
+
+  final ValueChanged<int> onDataChanged;
+  final int lastIndex;
+
+  const ExploreCourse({super.key, required this.onDataChanged, required this.lastIndex});
 
   @override
   State<ExploreCourse> createState() => _ExploreCourseState();
@@ -37,6 +42,7 @@ class _ExploreCourseState extends State<ExploreCourse> {
       appBar: AppBarWidget(
         title: "Explore",
         paddingController: 9,
+        lastPage: widget.lastIndex,
         actions: [
           Padding(
             padding: const EdgeInsets.only(top: 9.0, right: 25.0),
