@@ -146,7 +146,7 @@
    },
    {
       "id": 2,
-      "title": "Supervised Machine Learning: Regression and Classification",
+      "title": "Supervised Machine Learning",
       "category": [
          "machine learning",
          "python",
@@ -363,7 +363,7 @@
    },
    {
       "id": 3,
-      "title": "Data Mining Foundations and Practice Specialization",
+      "title": "Data Mining Foundations and  Specialization",
       "category": [
          "data mining",
          "statistics",
@@ -508,7 +508,7 @@
    },
    {
       "id": 4,
-      "title": "Blockchain Scalability and its Foundations in Distributed Systems",
+      "title": "Blockchain Scalability and its Foundations Systems",
       "category": [
          "programming",
          "Trends",
@@ -646,9 +646,7 @@
       "category": [
          "C#",
          "programming",
-         "Trends",
-         ".Net Framework",
-         "Infrastructure"
+         "Trends"
       ],
       "ratings": "4.0",
       "author": "Sven Lappay",

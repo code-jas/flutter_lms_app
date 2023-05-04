@@ -10,8 +10,15 @@ import 'package:learning_app/widgets/home_screen/course_status_card.dart';
 import 'package:learning_app/widgets/list_vew_cards.dart';
 
 // ignore: must_be_immutable
-class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  List<Course> courses = [];
 
   final user = FirebaseAuth.instance.currentUser!;
 
@@ -20,19 +27,24 @@ class HomeScreen extends StatelessWidget {
     FirebaseAuth.instance.signOut();
   }
 
-  List<Course> courses = [];
-
   void loadCoursesFromJson() async {
     String jsonData = await rootBundle.loadString('json/data.json');
     List<dynamic> coursesJson = jsonDecode(jsonData);
-    courses =
-        coursesJson.map((courseJson) => Course.fromJson(courseJson)).toList();
+    setState(() {
+      courses =
+          coursesJson.map((courseJson) => Course.fromJson(courseJson)).toList();
+    });
     print(courses);
   }
 
   @override
-  Widget build(BuildContext context) {
+  void initState() {
+    super.initState();
     loadCoursesFromJson();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       color: default_,
       height: MediaQuery.of(context).size.height,
