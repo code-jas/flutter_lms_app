@@ -51,12 +51,12 @@ class _AccountState extends State<Account> {
             height: 120,
             width: 120,
             child: CircleAvatar(
-              backgroundImage: AssetImage("assets/images/lappay_prof1.png"),
+              backgroundImage: AssetImage("assets/images/angelo_profi.jpg"),
             ),
           ),
           SizedBox(height: 30),
           Text(
-            'John A. Lappay',
+            'Angelo B. Silvestre',
             style: TextStyle(
               color: light_100,
               fontSize: 24,
@@ -65,7 +65,7 @@ class _AccountState extends State<Account> {
           ),
           SizedBox(height: 6),
           Text(
-            'lappay.john@gmail.com',
+            'johnangelo.silvestre04@gmail.com',
             style: TextStyle(color: light_100, fontSize: 14),
           )
         ]),

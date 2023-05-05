@@ -22,7 +22,7 @@ class _HeaderBarState extends State<HeaderBar> {
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(100)),
                 image: DecorationImage(
-                  image: AssetImage("assets/images/lappay_prof2.jpg"),
+                  image: AssetImage("assets/images/angelo_profi.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -46,7 +46,7 @@ class _HeaderBarState extends State<HeaderBar> {
                 ),
                 SizedBox(height: 5),
                 Text(
-                  'John A. Lappay',
+                  'Angelo B. Silvestre',
                   style: TextStyle(
                     color: light_200,
                     fontFamily: 'DMSans',
