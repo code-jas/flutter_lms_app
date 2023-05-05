@@ -2,12 +2,11 @@ import 'package:feather_icons/feather_icons.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:learning_app/constants/colors.dart';
+import 'package:learning_app/models/UserProfile.dart';
 import 'package:learning_app/widgets/app_bar.dart';
 import 'package:learning_app/widgets/login/button_signout.dart';
 
 class Account extends StatefulWidget {
-
-
   const Account({super.key});
 
   @override
@@ -16,6 +15,19 @@ class Account extends StatefulWidget {
 
 class _AccountState extends State<Account> {
   final user = FirebaseAuth.instance.currentUser!;
+  late GoogleUser _googleUser;
+  @override
+  void initState() {
+    super.initState();
+    setState(() {
+      _googleUser = GoogleUser.fromFirebaseUser(user);
+    });
+    print([
+      _googleUser.name,
+      _googleUser.email,
+      _googleUser.imageUrl ?? '',
+    ]);
+  }
 
   // sign user out method
   void signUserOut() {
@@ -26,7 +38,7 @@ class _AccountState extends State<Account> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: default_,
-      appBar: AppBarWidget(
+      appBar: const AppBarWidget(
         title: "Account",
         paddingController: 0,
         actions: [],
@@ -48,27 +60,30 @@ class _AccountState extends State<Account> {
       left: 0,
       right: 0,
       child: Center(
-        child: Column(children: const [
+        child: Column(children: [
           SizedBox(
             height: 120,
             width: 120,
             child: CircleAvatar(
-              backgroundImage: AssetImage("assets/images/angelo_profi.jpg"),
+              backgroundImage: _googleUser.imageUrl != null
+                  ? NetworkImage(_googleUser.imageUrl!)
+                  : const AssetImage("assets/images/angelo_profi.jpg")
+                      as ImageProvider<Object>,
             ),
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           Text(
-            'Angelo B. Silvestre',
-            style: TextStyle(
+            _googleUser.name != "" ? _googleUser.name : "Angelo Silvestre",
+            style: const TextStyle(
               color: light_100,
               fontSize: 24,
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(height: 6),
+          const SizedBox(height: 6),
           Text(
-            'johnangelo.silvestre04@gmail.com',
-            style: TextStyle(color: light_100, fontSize: 14),
+            _googleUser.email,
+            style: const TextStyle(color: light_100, fontSize: 14),
           )
         ]),
       ),

@@ -243,36 +243,36 @@ class _CourseDetailState extends State<CourseDetail> {
                         ),
                       ),
                     ),
-                    const SizedBox(width: 15),
-                    Expanded(
-                      child: GestureDetector(
-                        onTap: () {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //     builder: (context) => const CourseDetail(),
-                          //   ),
-                          // );
-                        },
-                        child: Container(
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: primary,
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: const Center(
-                            child: Text(
-                              'Join',
-                              style: TextStyle(
-                                color: light_100,
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
+                    // const SizedBox(width: 15),
+                    // Expanded(
+                    //   child: GestureDetector(
+                    //     onTap: () {
+                    //       // Navigator.push(
+                    //       //   context,
+                    //       //   MaterialPageRoute(
+                    //       //     builder: (context) => const CourseDetail(),
+                    //       //   ),
+                    //       // );
+                    //     },
+                    //     child: Container(
+                    //       height: 50,
+                    //       decoration: BoxDecoration(
+                    //         color: primary,
+                    //         borderRadius: BorderRadius.circular(10),
+                    //       ),
+                    //       child: const Center(
+                    //         child: Text(
+                    //           'Join',
+                    //           style: TextStyle(
+                    //             color: light_100,
+                    //             fontSize: 14,
+                    //             fontWeight: FontWeight.bold,
+                    //           ),
+                    //         ),
+                    //       ),
+                    //     ),
+                    //   ),
+                    // ),
                   ],
                 )
               ],

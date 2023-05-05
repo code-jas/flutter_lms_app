@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:learning_app/constants/colors.dart';
 import 'package:feather_icons/feather_icons.dart';
+import 'package:learning_app/models/UserProfile.dart';
 
+// ignore: must_be_immutable
 class HeaderBar extends StatefulWidget {
-  const HeaderBar({super.key});
+  GoogleUser googleUser;
+  HeaderBar({super.key, required this.googleUser});
 
   @override
   State<HeaderBar> createState() => _HeaderBarState();
@@ -18,24 +21,22 @@ class _HeaderBarState extends State<HeaderBar> {
         child: IntrinsicHeight(
             child: Row(
           children: [
-            Container(
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(100)),
-                image: DecorationImage(
-                  image: AssetImage("assets/images/angelo_profi.jpg"),
-                  fit: BoxFit.cover,
-                ),
-              ),
+            SizedBox(
               height: 40,
               width: 40,
-              // add background image here
+              child: CircleAvatar(
+                backgroundImage: widget.googleUser.imageUrl != null
+                    ? NetworkImage(widget.googleUser.imageUrl!)
+                    : const AssetImage("assets/images/angelo_profi.jpg")
+                        as ImageProvider<Object>,
+              ),
             ),
             const SizedBox(width: 20),
             Expanded(
                 child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text(
+              children: [
+                const Text(
                   'Welcome Back',
                   style: TextStyle(
                     color: light_200,
@@ -44,10 +45,12 @@ class _HeaderBarState extends State<HeaderBar> {
                     fontWeight: FontWeight.normal,
                   ),
                 ),
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
                 Text(
-                  'Angelo B. Silvestre',
-                  style: TextStyle(
+                  widget.googleUser.name != ""
+                      ? widget.googleUser.name
+                      : "Angelo Silvestre",
+                  style: const TextStyle(
                     color: light_200,
                     fontFamily: 'DMSans',
                     fontSize: 14,

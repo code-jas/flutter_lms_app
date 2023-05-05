@@ -62,58 +62,57 @@ class _ExploreCourseState extends State<ExploreCourse> {
       ),
       body: SafeArea(
         child: Container(
-            margin: const EdgeInsets.only(top: 9),
-            height: MediaQuery.of(context).size.height * 0.804,
-            width: MediaQuery.of(context).size.width,
-            decoration: const BoxDecoration(
-              color: dark_100,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(30),
-                topRight: Radius.circular(30),
-              ),
+          margin: const EdgeInsets.only(top: 9),
+          height: MediaQuery.of(context).size.height * 0.804,
+          width: MediaQuery.of(context).size.width,
+          decoration: const BoxDecoration(
+            color: dark_100,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30),
+              topRight: Radius.circular(30),
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // form place holder
-                Container(
-                  margin: const EdgeInsets.all(20),
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  decoration: BoxDecoration(
-                    color: dark_200,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: TextField(
-                          controller: _searchController,
-                          onChanged: (value) {
-                            setState(() {
-                              searchQuery = value;
-                            });
-                          },
-                          style: const TextStyle(
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // form place holder
+              Container(
+                margin: const EdgeInsets.all(20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                decoration: BoxDecoration(
+                  color: dark_200,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: TextField(
+                        controller: _searchController,
+                        onChanged: (value) {
+                          setState(() {
+                            searchQuery = value;
+                          });
+                        },
+                        style: const TextStyle(
+                          color: light_100,
+                          fontFamily: 'DMSans',
+                          fontSize: 12,
+                          fontWeight: FontWeight.normal,
+                        ),
+                        decoration: const InputDecoration(
+                          hintText: 'Search',
+                          hintStyle: TextStyle(
                             color: light_100,
                             fontFamily: 'DMSans',
                             fontSize: 12,
                             fontWeight: FontWeight.normal,
                           ),
-                          decoration: const InputDecoration(
-                            hintText: 'Search',
-                            hintStyle: TextStyle(
-                              color: light_100,
-                              fontFamily: 'DMSans',
-                              fontSize: 12,
-                              fontWeight: FontWeight.normal,
-                            ),
-                            border: InputBorder.none,
-                          ),
-                
+                          border: InputBorder.none,
                         ),
                       ),
-                      const SizedBox(width: 10),
-                      // add icon search here with size 20 and with onpress
+                    ),
+                    const SizedBox(width: 10),
+                    // add icon search here with size 20 and with onpress
                     GestureDetector(
                       child: const Icon(
                         FeatherIcons.search,
@@ -124,42 +123,44 @@ class _ExploreCourseState extends State<ExploreCourse> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => SearchResult(searchQuery: searchQuery),
+                            builder: (context) =>
+                                SearchResult(searchQuery: searchQuery),
                           ),
                         );
                       },
                     ),
-                    ],
-                  ),
+                  ],
                 ),
-                // Browse by category
-                const TagCategory(),
-                // Recommended Course
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Container(
-                          padding: const EdgeInsets.only(left: 20),
-                          child: const Text(
-                            'Recommendation',
-                            style: TextStyle(
-                              color: light_200,
-                              fontFamily: 'DMSans',
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          )),
-                      const SizedBox(height: 10),
-                      Expanded(
-                        child: ListViewCards(coursesList: courses),
-                      ),
-                    ],
-                  ),
-                )
-              ],
-            )),
+              ),
+              // Browse by category
+              const TagCategory(),
+              // Recommended Course
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                        padding: const EdgeInsets.only(left: 20),
+                        child: const Text(
+                          'Recommendation',
+                          style: TextStyle(
+                            color: light_200,
+                            fontFamily: 'DMSans',
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        )),
+                    const SizedBox(height: 10),
+                    Expanded(
+                      child: ListViewCards(coursesList: courses),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }

@@ -7,7 +7,7 @@ import 'package:learning_app/widgets/course_card.dart';
 
 class ListViewCards extends StatefulWidget {
   final List<Course> coursesList;
-  ListViewCards({super.key, required this.coursesList});
+  const ListViewCards({super.key, required this.coursesList});
 
   @override
   State<ListViewCards> createState() => _ListViewCardsState();

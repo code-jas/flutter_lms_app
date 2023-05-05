@@ -49,20 +49,20 @@ class _RegisterPageState extends State<RegisterPage> {
 
       // The account was successfully created, so show a success message
       // ignore: use_build_context_synchronously
-      showDialog(
-        context: context,
-        builder: (_) => AlertDialog(
-          title: const Text('Account created'),
-          content: const Text(
-              'Your account has been created. Please sign in to continue.'),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context),
-              child: const Text('OK'),
-            ),
-          ],
-        ),
-      );
+      // showDialog(
+      //   context: context,
+      //   builder: (_) => AlertDialog(
+      //     title: const Text('Account created'),
+      //     content: const Text(
+      //         'Your account has been created. Please sign in to continue.'),
+      //     actions: [
+      //       TextButton(
+      //         onPressed: () => Navigator.pop(context),
+      //         child: const Text('OK'),
+      //       ),
+      //     ],
+      //   ),
+      // );
     } on FirebaseAuthException catch (e) {
       if (e.code == 'email-already-in-use') {
         // The email address is already in use, so show an error message

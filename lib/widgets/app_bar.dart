@@ -7,7 +7,6 @@ class AppBarWidget extends StatefulWidget implements PreferredSizeWidget {
   final List<Widget> actions;
   final int paddingController;
 
-
   const AppBarWidget({
     super.key,
     required this.title,
@@ -35,10 +34,10 @@ class _AppBarWState extends State<AppBarWidget> {
         onPressed: () {
           // back to previous screen
           if (widget.title == "Explore") {
-            print("Back to previous screen");
+            // print("Back to previous screen");
           } else {
             Navigator.pop(context);
-          }  
+          }
         },
       ),
       backgroundColor: default_,

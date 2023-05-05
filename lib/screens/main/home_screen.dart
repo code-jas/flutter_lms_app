@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:learning_app/constants/colors.dart';
+import 'package:learning_app/models/UserProfile.dart';
 import 'package:learning_app/models/course.dart';
 import 'package:learning_app/widgets/home_screen/header_bar.dart';
 import 'package:learning_app/widgets/home_screen/course_status_card.dart';
@@ -21,6 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Course> courses = [];
 
   final user = FirebaseAuth.instance.currentUser!;
+  late GoogleUser _googleUser;
 
   // sign user out method
   void signUserOut() {
@@ -40,6 +42,9 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     loadCoursesFromJson();
+    setState(() {
+      _googleUser = GoogleUser.fromFirebaseUser(user);
+    });
   }
 
   @override
@@ -70,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              const HeaderBar(),
+              HeaderBar(googleUser: _googleUser),
               const CourseStatusCard(),
               Container(
                   padding: const EdgeInsets.only(left: 20, top: 20),
