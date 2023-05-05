@@ -6,6 +6,4 @@ class EnrolledCourse{
     required this.id,
     required this.title,
   });
-  
-
 }
