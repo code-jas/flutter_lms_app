@@ -67,4 +67,34 @@ We are grateful for the contributions of these individuals and their work on thi
 
 Here is a screenshot of the app in action:
 
-![Screenshot of the app](./assets/images/account.png)
+![Sign In Screen](assets/images/screenshots/screenshot_signin.png)
+
+![Sign Up Screen](assets/images/screenshots/screenshot_signup.png)
+
+![Sign Up Validation](assets/images/screenshots/screenshot_signup_validation.png)
+
+![Sign in with Google ](assets/images/screenshots/screenshot_signin_google.png)
+
+![Home Screen](assets/images/screenshots/screenshot_home.png)
+
+![Course Details](assets/images/screenshots/screenshot_course_details.png)
+
+![Course Topic Outline](assets/images/screenshots/screenshot_course_topic_outline.png)
+
+![Course Topic Outline Validation](assets/images/screenshots/screenshot_topic_outline_join_first.png)
+
+![Course Topic Outline Enrolled](assets/images/screenshots/screenshot_topic_outline_enrolled.png)
+
+![Course Topic Content Enrolled](assets/images/screenshots/screenshot_topic_content_enrolled.png)
+
+![Explore Screen](assets/images/screenshots/screenshot_explore.png)
+
+![Explore Searched Screen](assets/images/screenshots/screenshot_explore_searched.png)
+
+![My Course InProgress Screen](assets/images/screenshots/screenshot_my_course_inprogress.png)
+
+![My Course Done Screen](assets/images/screenshots/screenshot_my_course_done.png)
+
+![Account Settings Screen](assets/images/screenshots/screenshot_account_settings.png)
+
+
