@@ -31,14 +31,13 @@ class _SearchResultState extends State<SearchResult> {
           coursesJson.map((courseJson) => Course.fromJson(courseJson)).toList();
     });
   }
-
+  
   @override
   void initState() {
     super.initState();
     query = widget.searchQuery;
     loadCoursesFromJson();
   }
-
 
   @override
   Widget build(BuildContext context) {
