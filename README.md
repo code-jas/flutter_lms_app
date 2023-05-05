@@ -67,4 +67,4 @@ We are grateful for the contributions of these individuals and their work on thi
 
 Here is a screenshot of the app in action:
 
-![Screenshot of the app](../assets/images/account.png)
+![Screenshot of the app](./assets/images/account.png)
