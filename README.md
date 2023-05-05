@@ -66,35 +66,63 @@ We are grateful for the contributions of these individuals and their work on thi
 ## Screenshot
 
 Here is a screenshot of the app in action:
+<div style="text-align:center">
+  <img src="assets/images/screenshots/screenshot_signin.png" alt="Sign In Screen" width="auto" height="500">
+</div>
 
-![Sign In Screen](assets/images/screenshots/screenshot_signin.png)
+<div style="text-align:center">
+  <img src="assets/images/screenshots/screenshot_signup.png" alt="Sign Up Screen" width="auto" height="500">
+</div>
 
-![Sign Up Screen](assets/images/screenshots/screenshot_signup.png)
+<div style="text-align:center">
+  <img src="assets/images/screenshots/screenshot_signup_validation.png" alt="Sign Up Validation" width="auto" height="500">
+</div>
 
-![Sign Up Validation](assets/images/screenshots/screenshot_signup_validation.png)
+<div style="text-align:center">
+  <img src="assets/images/screenshots/screenshot_sigin_google.png" alt="Sign in with Google" width="auto" height="500">
+</div>
 
-![Sign in with Google ](assets/images/screenshots/screenshot_signin_google.png)
+<div style="text-align:center">
+  <img src="assets/images/screenshots/screenshot_home.png" alt="Home Screen" width="auto" height="500">
+</div>
 
-![Home Screen](assets/images/screenshots/screenshot_home.png)
+<div style="text-align:center">
+  <img src="assets/images/screenshots/screenshot_course_detail.png" alt="Course Details" width="auto" height="500">
+</div>
 
-![Course Details](assets/images/screenshots/screenshot_course_details.png)
+<div style="text-align:center">
+  <img src="assets/images/screenshots/screenshot_topic_outline.png" alt="Course Topic Outline" width="auto" height="500">
+</div>
 
-![Course Topic Outline](assets/images/screenshots/screenshot_course_topic_outline.png)
+<div style="text-align:center">
+  <img src="assets/images/screenshots/screenshot_topic_outline_join_first.png" alt="Course Topic Outline Validation" width="auto" height="500">
+</div>
 
-![Course Topic Outline Validation](assets/images/screenshots/screenshot_topic_outline_join_first.png)
+<div style="text-align:center">
+  <img src="assets/images/screenshots/screenshot_enrolled_outline.png" alt="Topi Outlined Enrolled" width="auto" height="500">
+</div>
 
-![Course Topic Outline Enrolled](assets/images/screenshots/screenshot_topic_outline_enrolled.png)
+<div style="text-align:center">
+  <img src="assets/images/screenshots/screenshot_topic_content.png" alt="Course Topic Content " width="auto" height="500">
+</div>
 
-![Course Topic Content Enrolled](assets/images/screenshots/screenshot_topic_content_enrolled.png)
+<div style="text-align:center">
+  <img src="assets/images/screenshots/screenshot_explore.png" alt="Explore Screen" width="auto" height="500">
+</div>
 
-![Explore Screen](assets/images/screenshots/screenshot_explore.png)
+<div style="text-align:center">
+  <img src="assets/images/screenshots/screenshot_explore_search_result.png" alt="Explore Searched Screen" width="auto" height="500">
+</div>
 
-![Explore Searched Screen](assets/images/screenshots/screenshot_explore_search_result.png)
+<div style="text-align:center">
+  <img src="assets/images/screenshots/screenshot_mycourse_inprogress.png" alt="My Course InProgress Screen" width="auto" height="500">
+</div>
 
-![My Course InProgress Screen](assets/images/screenshots/screenshot_my_course_inprogress.png)
+<div style="text-align:center">
+  <img src="assets/images/screenshots/screenshot_mycourse_done.png" alt="My Course Done Screen" width="auto" height="500">
+</div>
 
-![My Course Done Screen](assets/images/screenshots/screenshot_my_course_done.png)
-
-![Account Settings Screen](assets/images/screenshots/screenshot_account_settings.png)
-
+<div style="text-align:center">
+  <img src="assets/images/screenshots/screenshot_account.png" alt="Account Settings Screen" width="auto" height="500">
+</div>
 
