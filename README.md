@@ -52,3 +52,12 @@ flutter run
 - Search and filter courses based on Categories
 - User profile with user settings and support buttons
 - Join courses and mark them as In Progress or Done.
+
+## Contributors
+
+- John A. Lappay: UI design and development
+- John Angelo Silvestre: UI design and development
+- Camille Sta. Romana: Data mining and organization, JSON structure
+- Mary Antonnette Ubina: Data mining and organization, JSON structure
+
+We are grateful for the contributions of these individuals and their work on this project. Thank you for your hard work and dedication!
