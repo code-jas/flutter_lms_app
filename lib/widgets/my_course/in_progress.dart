@@ -27,6 +27,7 @@ class _InProgressState extends State<InProgress> {
           itemBuilder: (BuildContext context, int index) {
             Course course = widget.coursesList[index];
             return MyCourseCard(
+              id: course.id,
               title: course.title,
               category: course.category,
               shortDescription: course.shortDescription,

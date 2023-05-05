@@ -39,6 +39,8 @@ dependencies:
   firebase_auth: ^4.4.2
   google_sign_in: ^6.1.0
   feather_icons: ^1.2.0
+  shared_preferences: ^2.1.0
+  path_provider: ^2.0.14
 
 dev_dependencies:
   flutter_test:
@@ -66,7 +68,6 @@ flutter:
   assets:
     - assets/images/
     - json/
-  
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

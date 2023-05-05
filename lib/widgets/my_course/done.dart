@@ -27,6 +27,7 @@ class _DoneState extends State<Done> {
           itemBuilder: (BuildContext context, int index) {
             Course course = widget.coursesList[index + 3];
             return MyCourseCard(
+              id: course.id,
               title: course.title,
               category: course.category,
               shortDescription: course.shortDescription,

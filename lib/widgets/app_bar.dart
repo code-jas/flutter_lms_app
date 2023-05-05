@@ -6,14 +6,13 @@ class AppBarWidget extends StatefulWidget implements PreferredSizeWidget {
   final String title;
   final List<Widget> actions;
   final int paddingController;
-  final int lastPage;
+
 
   const AppBarWidget({
     super.key,
     required this.title,
     required this.actions,
     required this.paddingController,
-    required this.lastPage,
   });
 
   @override
