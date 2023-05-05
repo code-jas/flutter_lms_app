@@ -122,7 +122,15 @@ class _SearchResultState extends State<SearchResult> {
                     Expanded(
                       child: ListViewCards(
                         coursesList:  // filter by query that title, author, category contains query
-                            coursesList.where((course) => course.title.contains(query) || course.author.contains(query) || course.category.contains(query)).toList(),
+                            coursesList
+    .where((course) =>
+      course.title.toLowerCase().contains(query.toLowerCase()) ||
+      course.author.toLowerCase().contains(query.toLowerCase()) ||
+      course.category.any((category) =>
+        category.toLowerCase().contains(query.toLowerCase())
+      )
+    )
+    .toList(),
                       ),
                     ),
                   ],
