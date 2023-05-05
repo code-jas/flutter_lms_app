@@ -213,6 +213,7 @@ class _AccountState extends State<Account> {
                   text: 'Sign Out',
                   onTap: signUserOut,
                 ),
+                const SizedBox(height: 15),
                 // Add more ListTiles for other settings options here
               ],
             ),
