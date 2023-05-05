@@ -89,7 +89,7 @@ Here is a screenshot of the app in action:
 
 ![Explore Screen](assets/images/screenshots/screenshot_explore.png)
 
-![Explore Searched Screen](assets/images/screenshots/screenshot_explore_searched.png)
+![Explore Searched Screen](assets/images/screenshots/screenshot_explore_search_result.png)
 
 ![My Course InProgress Screen](assets/images/screenshots/screenshot_my_course_inprogress.png)
 
