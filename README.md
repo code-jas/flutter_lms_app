@@ -1,22 +1,24 @@
-# learning_app
+### Learning Management System
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-[Google SignIn Fix Error](https://stackoverflow.com/questions/54557479/flutter-and-google-sign-in-plugin-platformexceptionsign-in-failed-com-google),
-
-
-
-
+##### Features
+###### - Login/Register 
+	- Login screen
+	- Registration screen
+###### - Dashboard
+	- Overview section
+	- My Courses section
+	- Upcoming deadlines section
+##### - Courses
+	- List of courses
+	- Courses details
+		- Course overview
+		- Lessons
+			-Lesson details
+		- Announcements
+###### - Profile
+	- Personal information
+	- Course progress
+	- Settings
+###### - Notifications
+	- List of notifications
+	- Notification details
