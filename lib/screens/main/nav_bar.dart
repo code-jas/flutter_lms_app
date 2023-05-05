@@ -21,15 +21,16 @@ class _DashboardState extends State<Dashboard> {
 
   late List<Widget> tabs;
 
+
   @override
   void initState() {
     super.initState();
 
     tabs = [
-      const HomeScreen(),
-      const ExploreCourse(),
-      const MyCourse(),
-      const Account(),
+      HomeScreen(),
+      ExploreCourse(),
+      MyCourse(),
+      Account(),
     ];
   }
 

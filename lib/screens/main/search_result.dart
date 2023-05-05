@@ -1,18 +1,45 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:learning_app/constants/colors.dart';
 import 'package:feather_icons/feather_icons.dart';
+import 'package:learning_app/models/course.dart';
 
 import '../../widgets/app_bar.dart';
 import '../../widgets/list_vew_cards.dart';
 
 class SearchResult extends StatefulWidget {
-  const SearchResult({super.key});
+  final String searchQuery;
+
+  const SearchResult({super.key, required this.searchQuery});
 
   @override
   State<SearchResult> createState() => _SearchResultState();
 }
 
 class _SearchResultState extends State<SearchResult> {
+  List<Course> coursesList = [];
+
+  String query = '';
+
+  void loadCoursesFromJson() async {
+    String jsonData = await rootBundle.loadString('json/data.json');
+    List<dynamic> coursesJson = jsonDecode(jsonData);
+    setState(() {
+      coursesList =
+          coursesJson.map((courseJson) => Course.fromJson(courseJson)).toList();
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    query = widget.searchQuery;
+    loadCoursesFromJson();
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,17 +82,17 @@ class _SearchResultState extends State<SearchResult> {
                   margin: const EdgeInsets.all(20),
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Row(
-                    children: const [
+                    children:  [
                       Expanded(
-                          child: Text(
-                        "Result for \"Swift UI\"",
-                        style: TextStyle(
+                        child: Text(
+                        "Result for \"$query\"",
+                        style: const TextStyle(
                           color: light_100,
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
                         ),
                       )),
-                      Text(
+                      const Text(
                         "Total 10",
                         style: TextStyle(
                           color: light_200,
@@ -92,9 +119,10 @@ class _SearchResultState extends State<SearchResult> {
                           ),
                         )),
                     const SizedBox(height: 10),
-                    const Expanded(
+                    Expanded(
                       child: ListViewCards(
-                        coursesList: [],
+                        coursesList:  // filter by query that title, author, category contains query
+                            coursesList.where((course) => course.title.contains(query) || course.author.contains(query) || course.category.contains(query)).toList(),
                       ),
                     ),
                   ],

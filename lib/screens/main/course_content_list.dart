@@ -1,31 +1,50 @@
 import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:learning_app/bloc/enrolled_course.dart';
 import 'package:learning_app/constants/colors.dart';
 import 'package:learning_app/models/course.dart';
 import 'package:learning_app/screens/main/lesson_content.dart';
 import 'package:learning_app/widgets/app_bar.dart';
 
+import '../../models/enrolled_course.dart';
+
 // ignore: must_be_immutable
 class CourseContentList extends StatefulWidget {
+  int id;
   String title;
   List<CourseContent> contents;
-  CourseContentList({super.key, required this.title, required this.contents});
+
+  CourseContentList(
+      {super.key,
+      required this.id,
+      required this.title,
+      required this.contents});
 
   @override
   State<CourseContentList> createState() => _CourseContentListState();
 }
 
 class _CourseContentListState extends State<CourseContentList> {
-  List<String> items = [
-    'Introduction to Flutter',
-    'Intermediate Flutter',
-    'Advanced Flutter',
-    'Create Widgets in Flutter',
-    'Create Apps in Flutter',
-    'Create Games in Flutter',
-    'Dynamic Apps in Flutter',
-    'Create fully function Facebook in Flutter',
-  ];
+  late EnrolledCourseBloc _enrolledCourseBloc;
+  bool isEnrolled = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _enrolledCourseBloc = EnrolledCourseBloc();
+    _enrolledCourseBloc.enrolledCourses.listen((event) {
+      setState(() {
+        isEnrolled = _enrolledCourseBloc.isEnrolled(widget.id);
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    _enrolledCourseBloc.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +73,6 @@ class _CourseContentListState extends State<CourseContentList> {
         itemCount: widget.contents.length,
         itemBuilder: (BuildContext context, int index) {
           CourseContent content = widget.contents[index];
-
           return Container(
             decoration: BoxDecoration(
               color: dark_200,
@@ -64,15 +82,46 @@ class _CourseContentListState extends State<CourseContentList> {
             child: TextButton(
               onPressed: () {
                 // Your button onPressed code here
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => LessonContent(
-                      topicTitle: content.title,
-                      topicList: content.subTopicList,
+                if (isEnrolled) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => LessonContent(
+                        topicTitle: content.title,
+                        topicList: content.subTopicList,
+                      ),
                     ),
-                  ),
-                );
+                  );
+                } else {
+                  // show dialog
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: const Text('Join Course'),
+                        content: const Text(
+                            'You need to join this course to access the content'),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: const Text('Cancel'),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              final enrolledCourse = EnrolledCourse(
+                                  id: widget.id, title: widget.title);
+                              _enrolledCourseBloc.addCourse(enrolledCourse);
+                              Navigator.of(context).pop();
+                            },
+                            child: const Text('Join'),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                }
               },
               style: TextButton.styleFrom(
                 foregroundColor: Colors.transparent,
@@ -154,31 +203,35 @@ class _CourseContentListState extends State<CourseContentList> {
         width: MediaQuery.of(context).size.width,
         child: ElevatedButton(
           onPressed: () {
-            // Show dialog box here
-            showDialog(
-              context: context,
-              builder: (BuildContext context) {
-                return AlertDialog(
-                  title: const Text(
-                    'Enrollment Successful',
-                    style: TextStyle(color: success),
-                  ),
-                  content: const Text('You have successfully enrolled!'),
-                  actions: [
-                    TextButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      child: const Text('OK'),
+            if (!isEnrolled) {
+              final enrolledCourse =
+                  EnrolledCourse(id: widget.id, title: widget.title);
+              _enrolledCourseBloc.addCourse(enrolledCourse);
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    title: const Text(
+                      'Enrollment Successful',
+                      style: TextStyle(color: success),
                     ),
-                  ],
-                );
-              },
-            );
+                    content: const Text('You have successfully enrolled!'),
+                    actions: [
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child: const Text('OK'),
+                      ),
+                    ],
+                  );
+                },
+              );
+            }
           },
           style: ElevatedButton.styleFrom(
             foregroundColor: light_100,
-            backgroundColor: primary,
+            backgroundColor: isEnrolled ? success : primary,
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(15),
@@ -186,7 +239,9 @@ class _CourseContentListState extends State<CourseContentList> {
               ),
             ),
           ),
-          child: const Text('Join'),
+          child: Text(
+            isEnrolled ? 'Enrolled' : 'Join',
+          ),
         ),
       ),
     );

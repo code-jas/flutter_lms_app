@@ -5,6 +5,7 @@ import 'package:learning_app/models/course.dart';
 import 'package:learning_app/screens/main/course_detail.dart';
 
 class MyCourseCard extends StatefulWidget {
+  final int id;
   final String title;
   final String author;
   final String authorImage;
@@ -16,6 +17,7 @@ class MyCourseCard extends StatefulWidget {
 
   const MyCourseCard({
     super.key,
+    required this.id,
     required this.title,
     required this.category,
     required this.author,
@@ -39,6 +41,7 @@ class _MyCourseCardState extends State<MyCourseCard> {
           context,
           MaterialPageRoute(
             builder: (context) => CourseDetail(
+                id: widget.id,
                 title: widget.title,
                 category: widget.category,
                 description: widget.description,

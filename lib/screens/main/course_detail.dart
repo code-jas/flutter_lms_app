@@ -4,8 +4,10 @@ import 'package:learning_app/models/course.dart';
 import 'package:learning_app/screens/main/course_content_list.dart';
 import 'package:learning_app/widgets/app_bar.dart';
 import 'package:learning_app/widgets/courses/tag_detail.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class CourseDetail extends StatefulWidget {
+  final int id;
   final String title;
   final String author;
   final String authorImage;
@@ -21,6 +23,7 @@ class CourseDetail extends StatefulWidget {
     required this.category,
     required this.description,
     required this.contents,
+    required this.id,
   });
 
   @override
@@ -28,6 +31,8 @@ class CourseDetail extends StatefulWidget {
 }
 
 class _CourseDetailState extends State<CourseDetail> {
+  SharedPreferences? prefs;
+
   bool _showMore = false;
   @override
   Widget build(BuildContext context) {
@@ -211,6 +216,7 @@ class _CourseDetailState extends State<CourseDetail> {
                             context,
                             MaterialPageRoute(
                               builder: (context) => CourseContentList(
+                                id: widget.id,
                                 title: widget.title,
                                 contents: widget.contents,
                               ),

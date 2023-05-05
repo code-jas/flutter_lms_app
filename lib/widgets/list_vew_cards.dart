@@ -7,7 +7,7 @@ import 'package:learning_app/widgets/course_card.dart';
 
 class ListViewCards extends StatefulWidget {
   final List<Course> coursesList;
-  const ListViewCards({super.key, required this.coursesList});
+  ListViewCards({super.key, required this.coursesList});
 
   @override
   State<ListViewCards> createState() => _ListViewCardsState();
@@ -27,6 +27,7 @@ class _ListViewCardsState extends State<ListViewCards> {
           itemBuilder: (BuildContext context, int index) {
             Course course = widget.coursesList[index];
             return CourseCard(
+              id: course.id,
               title: course.title,
               category: course.category,
               shortDescription: course.shortDescription,

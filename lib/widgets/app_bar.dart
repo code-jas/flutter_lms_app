@@ -2,22 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:learning_app/constants/colors.dart';
 import 'package:feather_icons/feather_icons.dart';
 
-// class AppBarW extends StatefulWidget {
-//   const AppBarW({super.key});
-
-//   @override
-//   State<AppBarW> createState() => _AppBarWidgetState();
-// }
 class AppBarWidget extends StatefulWidget implements PreferredSizeWidget {
   final String title;
   final List<Widget> actions;
   final int paddingController;
 
-  const AppBarWidget(
-      {super.key,
-      required this.title,
-      required this.actions,
-      required this.paddingController});
+
+  const AppBarWidget({
+    super.key,
+    required this.title,
+    required this.actions,
+    required this.paddingController,
+  });
 
   @override
   State<AppBarWidget> createState() => _AppBarWState();
@@ -27,7 +23,6 @@ class AppBarWidget extends StatefulWidget implements PreferredSizeWidget {
 }
 
 class _AppBarWState extends State<AppBarWidget> {
-  @override
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -39,7 +34,11 @@ class _AppBarWState extends State<AppBarWidget> {
         ),
         onPressed: () {
           // back to previous screen
-          Navigator.pop(context);
+          if (widget.title == "Explore") {
+            print("Back to previous screen");
+          } else {
+            Navigator.pop(context);
+          }  
         },
       ),
       backgroundColor: default_,
