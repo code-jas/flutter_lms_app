@@ -61,3 +61,10 @@ flutter run
 - [Mary Antonnette Ubina](https://github.com/maubina): Data mining and organization, JSON structure
 
 We are grateful for the contributions of these individuals and their work on this project. Thank you for your hard work and dedication!
+
+
+## Screenshot
+
+Here is a screenshot of the app in action:
+
+![Screenshot of the app](../assets/images/account.png)
