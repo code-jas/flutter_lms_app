@@ -55,8 +55,8 @@ flutter run
 
 ## Contributors
 
-- [John A. Lappay](https://github.com/johnlappay): UI design and development
-- [John Angelo Silvestre](https://github.com/JohnAngeloDS): UI design and development
+- [John A. Lappay](https://github.com/supremoods): UI design and development
+- [John Angelo Silvestre](https://github.com/code-jas): UI design and development
 - [Camille Sta. Romana](https://github.com/camieller): Data mining and organization, JSON structure
 - [Mary Antonnette Ubina](https://github.com/maubina): Data mining and organization, JSON structure
 
