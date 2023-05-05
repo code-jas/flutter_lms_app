@@ -55,9 +55,9 @@ flutter run
 
 ## Contributors
 
-- John A. Lappay: UI design and development
-- John Angelo Silvestre: UI design and development
-- Camille Sta. Romana: Data mining and organization, JSON structure
-- Mary Antonnette Ubina: Data mining and organization, JSON structure
+- [John A. Lappay](https://github.com/johnlappay): UI design and development
+- [John Angelo Silvestre](https://github.com/JohnAngeloDS): UI design and development
+- [Camille Sta. Romana](https://github.com/camieller): Data mining and organization, JSON structure
+- [Mary Antonnette Ubina](https://github.com/maubina): Data mining and organization, JSON structure
 
 We are grateful for the contributions of these individuals and their work on this project. Thank you for your hard work and dedication!
