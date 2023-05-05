@@ -32,11 +32,11 @@ class _CourseContentListState extends State<CourseContentList> {
   void initState() {
     super.initState();
     _enrolledCourseBloc = EnrolledCourseBloc();
-     _enrolledCourseBloc.enrolledCourses.listen((event) {
+    _enrolledCourseBloc.enrolledCourses.listen((event) {
       setState(() {
-        isEnrolled = _enrolledCourseBloc.isEnrolled(widget.id);;
+        isEnrolled = _enrolledCourseBloc.isEnrolled(widget.id);
       });
-  });
+    });
   }
 
   @override
@@ -82,7 +82,7 @@ class _CourseContentListState extends State<CourseContentList> {
             child: TextButton(
               onPressed: () {
                 // Your button onPressed code here
-                if(isEnrolled){
+                if (isEnrolled) {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -92,14 +92,15 @@ class _CourseContentListState extends State<CourseContentList> {
                       ),
                     ),
                   );
-                }else{
+                } else {
                   // show dialog
                   showDialog(
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
                         title: const Text('Join Course'),
-                        content: const Text('You need to join this course to access the content'),
+                        content: const Text(
+                            'You need to join this course to access the content'),
                         actions: [
                           TextButton(
                             onPressed: () {
@@ -109,8 +110,8 @@ class _CourseContentListState extends State<CourseContentList> {
                           ),
                           TextButton(
                             onPressed: () {
-                              final enrolledCourse =
-                                EnrolledCourse(id: widget.id, title: widget.title);
+                              final enrolledCourse = EnrolledCourse(
+                                  id: widget.id, title: widget.title);
                               _enrolledCourseBloc.addCourse(enrolledCourse);
                               Navigator.of(context).pop();
                             },
@@ -121,7 +122,6 @@ class _CourseContentListState extends State<CourseContentList> {
                     },
                   );
                 }
-
               },
               style: TextButton.styleFrom(
                 foregroundColor: Colors.transparent,
@@ -203,13 +203,13 @@ class _CourseContentListState extends State<CourseContentList> {
         width: MediaQuery.of(context).size.width,
         child: ElevatedButton(
           onPressed: () {
-            if(!isEnrolled){
-               final enrolledCourse =
-                EnrolledCourse(id: widget.id, title: widget.title);
-            _enrolledCourseBloc.addCourse(enrolledCourse);
-            showDialog(
-              context: context,
-              builder: (BuildContext context) {
+            if (!isEnrolled) {
+              final enrolledCourse =
+                  EnrolledCourse(id: widget.id, title: widget.title);
+              _enrolledCourseBloc.addCourse(enrolledCourse);
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
                   return AlertDialog(
                     title: const Text(
                       'Enrollment Successful',

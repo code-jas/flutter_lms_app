@@ -12,9 +12,6 @@ import 'package:learning_app/widgets/explore_course/tag_category.dart';
 import 'package:learning_app/screens/main/search_result.dart';
 
 class ExploreCourse extends StatefulWidget {
-
-
-
   const ExploreCourse({super.key});
 
   @override
@@ -23,6 +20,8 @@ class ExploreCourse extends StatefulWidget {
 
 class _ExploreCourseState extends State<ExploreCourse> {
   List<Course> courses = [];
+  String searchQuery = '';
+  final TextEditingController _searchController = TextEditingController();
 
   void loadCoursesFromJson() async {
     String jsonData = await rootBundle.loadString('json/data.json');
@@ -86,9 +85,21 @@ class _ExploreCourseState extends State<ExploreCourse> {
                   ),
                   child: Row(
                     children: [
-                      const Expanded(
+                      Expanded(
                         child: TextField(
-                          decoration: InputDecoration(
+                          controller: _searchController,
+                          onChanged: (value) {
+                            setState(() {
+                              searchQuery = value;
+                            });
+                          },
+                          style: const TextStyle(
+                            color: light_100,
+                            fontFamily: 'DMSans',
+                            fontSize: 12,
+                            fontWeight: FontWeight.normal,
+                          ),
+                          decoration: const InputDecoration(
                             hintText: 'Search',
                             hintStyle: TextStyle(
                               color: light_100,
@@ -98,25 +109,26 @@ class _ExploreCourseState extends State<ExploreCourse> {
                             ),
                             border: InputBorder.none,
                           ),
+                
                         ),
                       ),
                       const SizedBox(width: 10),
                       // add icon search here with size 20 and with onpress
-                      GestureDetector(
-                          child: const Icon(
-                            FeatherIcons.search,
-                            color: light_100,
-                            size: 20,
+                    GestureDetector(
+                      child: const Icon(
+                        FeatherIcons.search,
+                        color: light_100,
+                        size: 20,
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SearchResult(searchQuery: searchQuery),
                           ),
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const SearchResult(),
-                              ),
-                            );
-                          } //navigate to search screen
-                          ),
+                        );
+                      },
+                    ),
                     ],
                   ),
                 ),

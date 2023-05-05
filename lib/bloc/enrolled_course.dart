@@ -26,7 +26,5 @@ class EnrolledCourseBloc {
   bool isEnrolled(int courseId) {
     return _enrolledCourses.any((course) => course.id == courseId);
   }
-
-
   // put getters here
 }
