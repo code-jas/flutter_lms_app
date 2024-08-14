@@ -66,63 +66,21 @@ We are grateful for the contributions of these individuals and their work on thi
 ## Screenshot
 
 Here is a screenshot of the app in action:
-<div style="text-align:center">
-  <img src="assets/images/screenshots/screenshot_signin.png" alt="Sign In Screen" width="auto" height="500">
-</div>
-
-<div style="text-align:center">
-  <img src="assets/images/screenshots/screenshot_signup.png" alt="Sign Up Screen" width="auto" height="500">
-</div>
-
-<div style="text-align:center">
-  <img src="assets/images/screenshots/screenshot_signup_validation.png" alt="Sign Up Validation" width="auto" height="500">
-</div>
-
-<div style="text-align:center">
-  <img src="assets/images/screenshots/screenshot_sigin_google.png" alt="Sign in with Google" width="auto" height="500">
-</div>
-
-<div style="text-align:center">
-  <img src="assets/images/screenshots/screenshot_home.png" alt="Home Screen" width="auto" height="500">
-</div>
-
-<div style="text-align:center">
-  <img src="assets/images/screenshots/screenshot_course_detail.png" alt="Course Details" width="auto" height="500">
-</div>
-
-<div style="text-align:center">
-  <img src="assets/images/screenshots/screenshot_topic_outline.png" alt="Course Topic Outline" width="auto" height="500">
-</div>
-
-<div style="text-align:center">
-  <img src="assets/images/screenshots/screenshot_topic_outline_join_first.png" alt="Course Topic Outline Validation" width="auto" height="500">
-</div>
-
-<div style="text-align:center">
-  <img src="assets/images/screenshots/screenshot_enrolled_outline.png" alt="Topi Outlined Enrolled" width="auto" height="500">
-</div>
-
-<div style="text-align:center">
-  <img src="assets/images/screenshots/screenshot_topic_content.png" alt="Course Topic Content " width="auto" height="500">
-</div>
-
-<div style="text-align:center">
-  <img src="assets/images/screenshots/screenshot_explore.png" alt="Explore Screen" width="auto" height="500">
-</div>
-
-<div style="text-align:center">
-  <img src="assets/images/screenshots/screenshot_explore_search_result.png" alt="Explore Searched Screen" width="auto" height="500">
-</div>
-
-<div style="text-align:center">
-  <img src="assets/images/screenshots/screenshot_mycourse_inprogress.png" alt="My Course InProgress Screen" width="auto" height="500">
-</div>
-
-<div style="text-align:center">
-  <img src="assets/images/screenshots/screenshot_mycourse_done.png" alt="My Course Done Screen" width="auto" height="500">
-</div>
-
-<div style="text-align:center">
-  <img src="assets/images/screenshots/screenshot_account.png" alt="Account Settings Screen" width="auto" height="500">
-</div>
+<p align="center">
+  <img src="assets/images/screenshots/screenshot_signin.png" alt="Sign In Screen" height="500"/>
+  <img src="assets/images/screenshots/screenshot_signup.png" alt="Sign Up Screen" height="500"/>
+  <img src="assets/images/screenshots/screenshot_signup_validation.png" alt="Sign Up Validation" height="500"/>
+  <img src="assets/images/screenshots/screenshot_sigin_google.png" alt="Sign in with Google" height="500"/>
+  <img src="assets/images/screenshots/screenshot_home.png" alt="Home Screen" height="500"/>
+  <img src="assets/images/screenshots/screenshot_course_detail.png" alt="Course Details" height="500"/>
+  <img src="assets/images/screenshots/screenshot_topic_outline.png" alt="Course Topic Outline" height="500"/>
+  <img src="assets/images/screenshots/screenshot_topic_outline_join_first.png" alt="Course Topic Outline Validation" height="500"/>
+  <img src="assets/images/screenshots/screenshot_enrolled_outline.png" alt="Topic Outlined Enrolled" height="500"/>
+  <img src="assets/images/screenshots/screenshot_topic_content.png" alt="Course Topic Content" height="500"/>
+  <img src="assets/images/screenshots/screenshot_explore.png" alt="Explore Screen" height="500"/>
+  <img src="assets/images/screenshots/screenshot_explore_search_result.png" alt="Explore Searched Screen" height="500"/>
+  <img src="assets/images/screenshots/screenshot_mycourse_inprogress.png" alt="My Course InProgress Screen" height="500"/>
+  <img src="assets/images/screenshots/screenshot_mycourse_done.png" alt="My Course Done Screen" height="500"/>
+  <img src="assets/images/screenshots/screenshot_account.png" alt="Account Settings Screen" height="500"/>
+</p>
 
